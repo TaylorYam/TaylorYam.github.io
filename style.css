@@ -221,6 +221,19 @@ h3 {
     box-shadow: 0 4px 10px rgba(150, 125, 70, 0.3);
 }
 
+/* Specific Dark Button for Strategy */
+.btn.secondary.btn-dark {
+    border-color: #5c4d42;
+    /* Dark Espresso */
+    color: #5c4d42;
+}
+
+.btn.secondary.btn-dark:hover {
+    background: #5c4d42;
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(92, 77, 66, 0.3);
+}
+
 .btn:hover {
     transform: translateY(-2px);
 }
