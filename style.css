@@ -688,11 +688,12 @@ h3 {
         margin: 0.5rem 0;
         flex-direction: column;
         /* Stack arrows vertical */
-        min-width: auto;
-        width: 60px;
-        height: 100px;
+        min-width: 100px;
+        /* Ensure enough width for horizontal text */
+        width: auto;
+        height: auto;
         border-radius: 30px;
-        padding: 1rem 0.5rem;
+        padding: 0.8rem 1rem;
     }
 
     /* Change arrows to Vertical for Mobile */
