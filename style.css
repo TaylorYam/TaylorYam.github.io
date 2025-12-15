@@ -220,6 +220,13 @@ h3 {
     padding: 6rem 5%;
 }
 
+.alt-bg {
+    background-color: #e8e4dc;
+    /* Warm Grey / Latte */
+    border-top: 1px solid var(--glass-border);
+    border-bottom: 1px solid var(--glass-border);
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
