@@ -286,6 +286,25 @@ h3 {
     height: 200px;
     background-size: cover;
     background-position: center;
+    display: flex;
+    /* Centering the icon */
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.service-icon {
+    width: 80px;
+    height: 80px;
+    color: rgba(255, 255, 255, 0.7);
+    /* Subtle white */
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.project-card:hover .service-icon {
+    transform: scale(1.1);
+    /* Gentle zoom on hover */
+    color: rgba(255, 255, 255, 0.95);
 }
 
 .placeholder-gradient-1 {
