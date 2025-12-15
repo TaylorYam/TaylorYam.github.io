@@ -64,6 +64,10 @@ h3 {
     color: var(--primary-color);
 }
 
+.nowrap {
+    white-space: nowrap;
+}
+
 /* Navbar */
 .navbar {
     display: flex;
