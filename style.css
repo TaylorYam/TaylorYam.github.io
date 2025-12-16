@@ -1446,8 +1446,9 @@ footer {
     display: inline-block;
     position: absolute;
     top: 20px;
-    right: 20px;
-    /* Top Right corner */
+    left: 20px;
+    /* Moved to Left */
+    right: auto;
     z-index: 10;
     margin: 0;
 }
@@ -1516,33 +1517,33 @@ footer {
 }
 
 /* Close Button in Fullpage Mode */
+/* Close Button in Fullpage Mode */
 .modal-content.fullpage .close-btn {
     position: absolute;
     top: 20px;
-    left: 20px;
+    right: 20px;
+    /* Positioned Right */
+    left: auto;
     float: none;
     color: #333;
-    background: rgba(255, 255, 255, 0.5);
-    width: 40px;
-    height: 40px;
+    background: rgba(255, 255, 255, 0.95);
+    /* More opaque background */
+    width: 44px;
+    /* Slightly larger */
+    height: 44px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 24px;
     z-index: 30;
-    /* Higher than nav buttons */
     backdrop-filter: blur(5px);
     transition: all 0.3s;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    /* Added shadow */
 }
 
 .modal-content.fullpage .close-btn:hover {
     background: rgba(255, 255, 255, 0.9);
     color: #000;
-}
-
-/* Override Close Button Position to Right */
-.modal-content.fullpage .close-btn {
-    left: auto;
-    right: 20px;
 }
