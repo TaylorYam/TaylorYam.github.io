@@ -4,153 +4,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的個人網站 | Portfolio</title>
-    <meta name="description" content="歡迎來到我的個人作品集網站，這裡展示了我的專案與技能。">
-    <link rel="stylesheet" href="style.css">
+    <title>Taylor Yam 任益農 | 量化交易與資產配置專家</title>
+    <meta name="description" content="Taylor Yam (任益農) 個人網站 - 專注於全球市場量化交易、美股資產配置與不動產活化策略。分享實戰經驗與投資觀點。">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body>
+    <!-- 導覽列 -->
     <nav class="navbar">
-        <div class="logo">Taylor.Invest</div>
+        <div class="logo">Taylor Yam</div>
         <ul class="nav-links">
             <li><a href="#home">首頁</a></li>
-            <li><a href="#about">關於我</a></li>
             <li><a href="#services">專業服務</a></li>
-            <li><a href="#strategy">策略分享</a></li>
-            <li><a href="#contact">聯絡諮詢</a></li>
+            <li><a href="#about">關於我</a></li>
+            <li><a href="#contact">聯絡資訊</a></li>
         </ul>
-
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </nav>
 
-    <header id="home" class="hero">
+    <!-- Hero Section -->
+    <section id="home" class="hero">
         <div class="hero-content">
-            <h1 class="hero-title">
-                總是賺點小錢就跑，<br>賠錢卻死抱不放？
-            </h1>
-            <p class="hero-subtitle">
-                結合 <span class="keep-phrase">6 年交易實戰經驗與</span><span class="keep-phrase">程式交易邏輯</span>，為您提供<span
-                    class="keep-phrase">超越傳統觀點</span>的<span class="keep-phrase">投資與全球資產配置建議。</span>
-            </p>
+            <div class="profile-container">
+                <img src="images/profile.jpg" alt="Taylor Yam Profile Photo" class="profile-photo">
+            </div>
+            <h1>運用量化思維，<br>駕馭全球金融市場</h1>
+            <p class="subtitle">從美股動能策略到不動產活化，<br>為您打造全方位的資產增值藍圖。</p>
             <div class="hero-buttons">
-                <a href="javascript:void(0)" class="btn primary" onclick="openModal('private')">獲取免費投資健檢</a>
-                <a href="javascript:void(0)" class="btn secondary btn-dark" onclick="openModal('official')">訂閱量化週報</a>
-            </div>
-        </div>
-    </header>
-
-    <!-- Value Proposition Section -->
-    <section id="value-props" class="section value-bg">
-        <div class="container">
-            <div class="value-grid">
-                <!-- Value 1: The Insight -->
-                <div class="value-card">
-                    <div class="value-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z" stroke-linejoin="round" />
-                            <circle cx="12" cy="12" r="3" />
-                        </svg>
-                    </div>
-                    <h3><span class="highlight-title">洞悉市場</span>THE INSIGHT</h3>
-                    <p>
-                        <span class="keep-phrase">不盲目預測低點，</span>而是<span class="keep-phrase">像獵人一樣思考，</span><span
-                            class="keep-phrase">等待趨勢確認才進場。</span>
-                    </p>
-                </div>
-                <!-- Value 2: The Discipline -->
-                <div class="value-card">
-                    <div class="value-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke-linejoin="round" />
-                        </svg>
-                    </div>
-                    <h3><span class="highlight-title">克服人性</span>THE DISCIPLINE</h3>
-                    <p>
-                        市場證明：<span class="keep-phrase">『買進上漲中的股票』</span><span class="keep-phrase">勝率更高。</span>我幫您<span
-                            class="keep-phrase">克服追高的恐懼，</span><span class="keep-phrase">抱住完整的波段。</span>
-                    </p>
-                </div>
-                <!-- Value 3: The Logic -->
-                <div class="value-card">
-                    <div class="value-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M18 20V10M12 20V4M6 20v-6" stroke-linecap="round" />
-                        </svg>
-                    </div>
-                    <h3><span class="highlight-title">量化驗證</span>THE LOGIC</h3>
-                    <p>
-                        <span class="keep-phrase">拒絕憑感覺交易。</span>每一筆進出，<span class="keep-phrase">都有程式回測數據</span>與<span
-                            class="keep-phrase">量化邏輯做後盾。</span>
-                    </p>
-                </div>
+                <a href="#services" class="btn primary">探索專業服務</a>
+                <a href="#contact" class="btn secondary">立即預約諮詢</a>
             </div>
         </div>
     </section>
 
-
-
-    <!-- 關於我區塊 (Moved Before Services) -->
-    <section id="about" class="section">
+    <!-- 價值主張/專業服務 -->
+    <section id="services" class="services section-padding">
         <div class="container">
-
-            <div class="about-container">
-                <!-- Text Content (Moved to Left) -->
-                <div class="about-content">
-                    <h4 class="about-position">玉山證券 複委託專員</h4>
-                    <p class="about-intro" style="font-size: 1.6rem; color: var(--primary-color);">
-                        我不只看數據，更用「<span class="text-highlight">交易員的經驗</span>」洞悉佈局。
-                    </p>
-                    <p class="about-details">
-                        來自外商自營部的實戰歷練，讓我習慣在數據之外，運用更高層級的思維，捕捉籌碼與市場氛圍的轉折。
-                    </p>
-                    <p class="about-details" style="margin-top: 1rem;">
-                        我提供洞悉市場的視野。我將協助您把「<span class="text-highlight">量化思維</span>」作為底層支撐，並用「<span
-                            class="text-highlight">實戰經驗</span>」優化決策。讓您的每一次進出，不再是隨波逐流，而是有憑有據的專業交易。
-                    </p>
-                </div>
-                <!-- Image Block (Moved to Right) -->
-                <div class="about-visual">
-                    <div class="profile-container">
-                        <img src="images/profile.jpg" alt="Taylor Yam 任益農 - 個人照片" class="profile-image">
-                    </div>
-                </div>
-            </div>
-
-            <div class="stats-grid">
-                <div class="stat-card">
-                    <h3>6年+</h3>
-                    <p>市場實戰經驗<br><span style="font-size:0.8rem; color:#8a7a70;">港股權證 / 牛熊證</span></p>
-                </div>
-                <div class="stat-card">
-                    <h3>量化</h3>
-                    <p>程式交易思維<br><span style="font-size:0.8rem; color:#8a7a70;">期貨策略開發經驗</span></p>
-                </div>
-                <div class="stat-card">
-                    <h3>全球</h3>
-                    <p>宏觀投資視野<br><span style="font-size:0.8rem; color:#8a7a70;">跨國資產配置</span></p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 專業服務區塊 (Moved After About) -->
-    <section id="services" class="section alt-bg">
-        <div class="container">
-            <h2 class="section-title">專業服務</h2>
-            <div class="portfolio-grid">
+            <h2 class="section-title">專業服務領域</h2>
+            <div class="cards-grid">
                 <!-- 服務項目 1 -->
-                <div class="project-card">
-                    <div class="card-image placeholder-gradient-1">
-                        <!-- Icon: US Stocks / Growth -->
-                        <svg class="service-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M3 3V21H21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                            <path d="M19 9L14 14L10 10L7 13" stroke="currentColor" stroke-width="1.5"
-                                stroke-linecap="round" stroke-linejoin="round" />
-                            <circle cx="19" cy="9" r="2" fill="currentColor" fill-opacity="0.2" stroke="none" />
-                        </svg>
+                <div class="card service-card">
+                    <div class="card-icon">
+                        <i class="fas fa-chart-line"></i>
                     </div>
                     <div class="card-content">
                         <h3>美股量化動能配置</h3>
@@ -168,264 +73,152 @@
                     </div>
                 </div>
                 <!-- 服務項目 2 -->
-                <div class="project-card">
-                    <div class="card-image placeholder-gradient-2">
-                        <!-- Icon: Regular Savings / Time -->
-                        <svg class="service-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5" />
-                            <path d="M12 6V12L16 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-                            <path d="M12 17V17.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-                        </svg>
+                <div class="card service-card">
+                    <div class="card-icon">
+                        <i class="fas fa-home"></i>
                     </div>
                     <div class="card-content">
-                        <h3>長期資產累積方案</h3>
+                        <h3>不動產活化策略</h3>
                         <p>
-                            <span class="keep-phrase">打造您的退休護城河。</span>透過<span class="keep-phrase">紀律投資全球指數，</span><span
-                                class="keep-phrase">複利滾存千萬資產。</span>
+                            針對房產持有者，規劃<span class="keep-phrase">低利增貸方案，</span>活化<span
+                                class="keep-phrase">閒置資產</span>投入<span class="keep-phrase">高效率市場。</span>
                         </p>
-                        <a href="#contact" class="card-link">開始規劃 &rarr;</a>
+                        <a href="javascript:void(0)" class="card-link" onclick="openModal('private')">諮詢詳情 &rarr;</a>
                     </div>
                 </div>
                 <!-- 服務項目 3 -->
-                <div class="project-card">
-                    <div class="card-image placeholder-gradient-3">
-                        <!-- Icon: Bonds / Certificate -->
-                        <svg class="service-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect x="5" y="4" width="14" height="16" rx="2" stroke="currentColor" stroke-width="1.5" />
-                            <path d="M9 9H15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-                            <path d="M9 13H15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-                            <path d="M9 17H13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-                        </svg>
+                <div class="card service-card">
+                    <div class="card-icon">
+                        <i class="fas fa-globe-americas"></i>
                     </div>
                     <div class="card-content">
-                        <h3>穩定現金流規劃</h3>
+                        <h3>全球複委託交易</h3>
                         <p>
-                            <span class="keep-phrase">保本優先。</span>嚴選<span class="keep-phrase">高評級美元企業債，</span>建構穩定的<span
-                                class="keep-phrase">現金流系統。</span>
+                            提供玉山證券<span class="keep-phrase">全方位複委託服務，</span>即時參與<span
+                                class="keep-phrase">美、港、日</span>等<span class="keep-phrase">全球主要市場。</span>
                         </p>
-                        <a href="#contact" class="card-link">了解更多 &rarr;</a>
+                        <a href="javascript:void(0)" class="card-link" onclick="openModal('official')">了解開戶 &rarr;</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 獨家策略區塊 -->
-    <section id="strategy" class="section strategy-bg">
-        <div class="container">
-            <div class="strategy-container">
-                <div class="strategy-content">
-                    <span class="badge">量化思維分享</span>
-                    <h2 class="strategy-title">美股全天候量化投資策略</h2>
-                    <p class="strategy-desc">
-                        <span class="keep-phrase">不再被動承受市場波動。</span>本策略架構採用<span
-                            class="keep-phrase"><strong>「牛熊分流機制」</strong>，</span>以 <strong>S&P 500 與 200
-                            日均線</strong>之<span class="keep-phrase">相對位置作為判斷基準，</span><span
-                            class="keep-phrase">靈活調整部位配置。</span>
-                        <br><br>
-                        <!-- Trend Up Icon -->
-                        <svg class="icon-inline" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
-                            <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
-                            <polyline points="17 6 23 6 23 12"></polyline>
-                        </svg> <strong>多頭循環：</strong><span class="keep-phrase">順勢而為，</span><span
-                            class="keep-phrase">篩選動能強勢標的。</span><br>
-
-                        <!-- Shield Icon -->
-                        <svg class="icon-inline" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                        </svg> <strong>空頭循環：</strong><span class="keep-phrase">嚴守紀律，</span><span
-                            class="keep-phrase">執行分批佈局策略。</span>
-                    </p>
-                    <ul class="strategy-features">
-                        <li>
-                            <svg class="icon-inline" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
-                                <polyline points="20 6 9 17 4 12"></polyline>
-                            </svg> <strong>長期穩健：</strong>透過<span class="keep-phrase">量化模型驗證，</span>追求優於傳統指數的風險報酬比
-                        </li>
-                        <li>
-                            <svg class="icon-inline" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
-                                <polyline points="20 6 9 17 4 12"></polyline>
-                            </svg> <strong>絕對紀律：</strong>明確的<span class="keep-phrase">進出場依據，</span><span
-                                class="keep-phrase">排除人性貪婪與恐懼</span>
-                        </li>
-                        <li>
-                            <svg class="icon-inline" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
-                                <polyline points="20 6 9 17 4 12"></polyline>
-                            </svg> <strong>邏輯驗證：</strong>基於<span class="keep-phrase">歷史數據回測，</span><span
-                                class="keep-phrase">提供客觀的投資參考架構</span>
-                        </li>
-                    </ul>
-                    <p
-                        style="font-size: 0.8rem; color: #8a7a70; margin-top: 2.5rem; margin-bottom: 2.5rem; line-height: 1.6; opacity: 0.8;">
-                        *警語：本策略僅為程式交易邏輯分享與學術研究，<span class="keep-phrase">不代表對未來獲利之保證。</span><span
-                            class="keep-phrase">投資人應獨立判斷，</span><span
-                            class="keep-phrase">審慎評估並自負投資風險。</span>過往績效不代表未來表現。
-                    </p>
-                </div>
-                <div class="strategy-visual">
-                    <div class="chart-circle">
-                        <div class="chart-inner">
-                            <span>Quant<br>Logic</span>
-                        </div>
-                    </div>
-                    <!-- CTA Button Moved Here -->
-                    <a href="javascript:void(0)" class="btn primary" onclick="openModal('private')">
-                        <svg class="icon-inline" style="stroke: white;" viewBox="0 0 24 24" stroke-linecap="round"
-                            stroke-linejoin="round">
-                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
-                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
-                        </svg> 索取策略邏輯簡報 (交流分享)
-                    </a>
-                </div> <!-- Labels removed for cleaner look -->
+    <!-- 美股全天候量化投資策略 (Visual Section) -->
+    <section class="strategy-bg section-padding">
+        <div class="strategy-container">
+            <div class="strategy-content">
+                <h2>美股全天候量化投資策略</h2>
+                <p>不只是買進持有。透過嚴謹的數據回測與演算法，在不同市場週期中尋找最佳切入點。</p>
+                <ul class="strategy-points">
+                    <li><i class="fas fa-check-circle"></i> <strong>趨勢追蹤：</strong> 捕捉市場強勢股，順勢而為。</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>風險控管：</strong> 嚴格止損機制，保護本金。</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>多策略配置：</strong> 分散單一策略風險，追求穩健回報。</li>
+                </ul>
             </div>
-        </div>
-    </section>
-
-    <!-- 獨家策略區塊 2 (不動產活化) -->
-    <section id="strategy-2" class="section strategy-bg-alt">
-        <div class="container">
-            <div class="strategy-container reverse-layout">
-
-                <div class="strategy-content">
-                    <span class="badge" style="background: #4a5d85;">資產活化分享</span>
-                    <h2 class="strategy-title" style="color: #e8e6e1;">不動產資產活化計畫</h2>
-                    <p class="strategy-desc" style="color: #b0b0b0;">
-                        您的房子不只是居住空間，更是<span class="keep-phrase"></span>隱形的資金庫。</span>此計畫協助您運用<span
-                            class="keep-phrase"><strong>房產增貸</strong></span>取得<span
-                            class="keep-phrase">低成本資金，</span>轉投資於<span
-                            class="keep-phrase"><strong>世界級美國企業債券</strong></span>（如
-                        <span class="keep-phrase">聯合健康UNH,</span> <span class="keep-phrase">輝瑞Pfizer）。</span>
-                        <br><br>
-                        透過<span class="keep-phrase"><strong>「利差套利」</strong></span>與<span
-                            class="keep-phrase"><strong>「以息還息」</strong></span>的自償性循環，<span
-                            class="keep-phrase">在保有房產增值潛力的同時，</span><span class="keep-phrase">創造額外的套利價值。</span>
-                    </p>
-                    <ul class="strategy-features" style="color: #e8e6e1;">
-                        <li>
-                            <svg class="icon-inline" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"
-                                style="stroke: #e8e6e1;">
-                                <polyline points="20 6 9 17 4 12"></polyline>
-                            </svg> <strong>雙重效益：</strong>同時享有<span class="keep-phrase">房產增值與套利收益</span>
-                        </li>
-                        <li>
-                            <svg class="icon-inline" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"
-                                style="stroke: #e8e6e1;">
-                                <polyline points="20 6 9 17 4 12"></polyline>
-                            </svg> <strong>優質標的：</strong>嚴選<span class="keep-phrase">信評 BBB~A 級知名企業，</span><span
-                                class="keep-phrase">降低違約風險</span>
-                        </li>
-                        <li>
-                            <svg class="icon-inline" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"
-                                style="stroke: #e8e6e1;">
-                                <polyline points="20 6 9 17 4 12"></polyline>
-                            </svg> <strong>無痛套利：</strong>詳細規劃<span class="keep-phrase">現金流時程，</span><span
-                                class="keep-phrase">打造自償性還款計畫</span>
-                        </li>
-                    </ul>
-                    <p
-                        style="font-size: 0.8rem; color: #888; margin-top: 2.5rem; margin-bottom: 2.5rem; line-height: 1.6; opacity: 0.8;">
-                        *注意：本計畫<span class="keep-phrase">涉及槓桿操作與匯率風險。</span>投資前需謹慎評估<span
-                            class="keep-phrase">自身還款能力、</span><span class="keep-phrase">利率變動風險</span>及<span
-                            class="keep-phrase">匯率波動對資產淨值之影響。</span>
-                    </p>
-                </div>
-
-                <div class="strategy-visual">
-                    <!-- Asset Balance Visual (Restored) -->
-                    <div class="asset-balance">
-                        <!-- Left: Property -->
-                        <div class="balance-item">
-                            <span class="icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
-                                    style="width: 1em; height: 1em;">
-                                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-                                    <polyline points="9 22 9 12 15 12 15 22"></polyline>
-                                </svg>
-                            </span>
-                            <div class="label">不動產活化<br><span
-                                    style="font-size:0.9em; opacity:0.8; font-weight:400;">低利資金成本</span></div>
-                        </div>
-
-                        <!-- Middle: Arbitrage -->
-                        <div class="balance-arrow">套利</div>
-
-                        <!-- Right: Bond -->
-                        <div class="balance-item">
-                            <span class="icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
-                                    style="width: 1em; height: 1em;">
-                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                                    <polyline points="14 2 14 8 20 8"></polyline>
-                                    <line x1="16" y1="13" x2="8" y2="13"></line>
-                                    <line x1="16" y1="17" x2="8" y2="17"></line>
-                                    <line x1="10" y1="9" x2="8" y2="9"></line>
-                                </svg>
-                            </span>
-                            <div class="label">美國企業債<br><span
-                                    style="font-size:0.9em; opacity:0.8; font-weight:400;">高息優質標的</span></div>
-                        </div>
-                    </div>
-
-                    <a href="javascript:void(0)" class="btn primary" onclick="openModal('private')"
-                        style="background: linear-gradient(135deg, #4a5d85, #2d3b55); box-shadow: 0 4px 15px rgba(45, 59, 85, 0.4);">
-                        <svg class="icon-inline" style="stroke: white;" viewBox="0 0 24 24" stroke-linecap="round"
-                            stroke-linejoin="round">
-                            <line x1="18" y1="20" x2="18" y2="10"></line>
-                            <line x1="12" y1="20" x2="12" y2="4"></line>
-                            <line x1="6" y1="20" x2="6" y2="14"></line>
-                        </svg> 試算資產活化套利空間 (免費諮詢)
-                    </a>
+            <div class="strategy-visual">
+                <!-- Placeholder for Chart/Graph visualization -->
+                <div class="chart-placeholder">
+                    <span>Performance Chart</span>
+                    <!-- You can replace this with an actual image later -->
+                    <div class="mock-chart-line"></div>
                 </div>
             </div>
         </div>
     </section>
 
-
-
-    <section id="contact" class="section">
-        <div class="container">
-            <div class="contact-box">
-                <h2>準備好開始您的<br class="mobile-br">全球投資之旅了嗎？</h2>
-                <p>我是 Taylor Yam 任益農，您的專屬玉山證券複委託專員。</p>
-
-                <div class="contact-methods">
-                    <!-- Phone -->
-                    <a href="tel:0975386833" class="contact-item">
-                        <span class="icon">
-                            <svg style="width: 2rem; height: 2rem; stroke: currentColor; fill: none; stroke-width: 1.5;"
-                                viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
-                                <path
-                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
-                                </path>
-                            </svg>
-                        </span>
-                        <span class="value">0975-386-833</span>
-                    </a>
-
-                    <!-- LINE -->
-                    <div class="contact-item">
-                        <img src="images/qr-private.jpg" alt="LINE QR Code"
-                            style="width: 120px; height: auto; border-radius: 10px; margin-bottom: 0.5rem; box-shadow: 0 4px 12px rgba(62, 39, 35, 0.15);">
-                        <span class="value select-all" style="font-size: 0.9rem; color: #888;">ID: 05032015</span>
+    <!-- 不動產活化策略 (Visual Section - Alt) -->
+    <section class="strategy-bg-alt section-padding">
+        <div class="strategy-container reverse">
+            <div class="strategy-visual">
+                <div class="asset-chart-placeholder">
+                    <div class="asset-bar">
+                        <div class="asset-fill"></div>
+                        <span class="asset-label">傳統持有</span>
                     </div>
+                    <div class="asset-bar active">
+                        <div class="asset-fill-boost"></div>
+                        <span class="asset-label">活化後效益</span>
+                    </div>
+                </div>
+                <div style="text-align: center; margin-top:1.5rem;">
+                    <a href="javascript:void(0)" class="btn primary" onclick="openModal('private')">立即預約資產健檢</a>
+                </div>
+            </div>
+            <div class="strategy-content">
+                <h2>不動產活化</h2>
+                <p>您的房子不只是用來住的，更是您的隱形金庫。將不動產淨值轉化為流動資金，創造現金流。</p>
+                <ul class="strategy-points">
+                    <li><i class="fas fa-check-circle"></i> <strong>低利活化：</strong> 協助爭取最優銀行鑑價與利率。</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>套利思維：</strong> 利用利差進行低風險套利交易。</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>抗通膨：</strong> 讓資產增值速度跑贏通貨膨脹。</li>
+                </ul>
+            </div>
+        </div>
+    </section>
 
-                    <!-- Email -->
-                    <a href="mailto:ckelvin85520-72215@esunsec.com.tw" class="contact-item">
-                        <span class="icon">
-                            <svg style="width: 2rem; height: 2rem; stroke: currentColor; fill: none; stroke-width: 1.5;"
-                                viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
-                                </path>
-                                <polyline points="22,6 12,13 2,6"></polyline>
-                            </svg>
-                        </span>
-                        <span class="value" style="font-size: 0.9rem;">ckelvin85520-72215@esunsec.com.tw</span>
-                    </a>
+    <!-- 關於我 -->
+    <section id="about" class="about section-padding">
+        <div class="container about-container">
+            <div class="about-image">
+                <img src="images/profile.jpg" alt="Taylor Yam Portrait">
+            </div>
+            <div class="about-text">
+                <h2 class="section-title" style="text-align: left;">關於 Taylor 任益農</h2>
+                <h3 class="role-title">玉山證券 複委託專員 | 量化交易員</h3>
+                <p>
+                    擁有<strong>北京清華大學經濟學學位</strong>，並具備 6 年深厚的金融市場實戰經驗。
+                    專精於<strong>衍生性商品交易</strong>（香港窩輪、牛熊證）與<strong>指數期貨量化交易</strong>（CTA 策略）。
+                </p>
+                <p>
+                    不同於一般理專，我具備<strong>「大戶思維」</strong>與<strong>「量化實戰經驗」</strong>。
+                    我不僅僅銷售商品，更致力於運用程式交易邏輯，協助客戶在波動的市場中，建立可視化、可執行且具有正期望值的投資系統。
+                </p>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <span class="stat-number">6+</span>
+                        <span class="stat-label">年交易實戰</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">3+</span>
+                        <span class="stat-label">年量化開發</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">市場實戰經驗</span>
+                        <span class="stat-label">累積交易量</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- 聯絡/行動呼籲 -->
+    <section id="contact" class="contact section-padding">
+        <div class="container contact-wrapper">
+            <h2 class="section-title">開始您的財富增值計畫</h2>
+            <p class="contact-desc">無論是美股投資或資產活化，歡迎隨時聯繫交流。</p>
+
+            <div class="contact-methods">
+                <a href="javascript:void(0)" class="contact-item" onclick="openModal('official')">
+                    <i class="fab fa-line"></i>
+                    <span class="value">加入官方 LINE</span>
+                    <span class="label">獲取週報</span>
+                </a>
+                <a href="javascript:void(0)" class="contact-item" onclick="openModal('private')">
+                    <i class="fas fa-user-plus"></i>
+                    <span class="value">加入私人 LINE</span>
+                    <span class="label">一對一諮詢</span>
+                </a>
+                <a href="mailto:kelvin850403@gmail.com" class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span class="value">Email 聯繫</span>
+                    <span class="label">kelvin850403@gmail.com</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
         <p>&copy; 2025 Taylor Yam. All rights reserved.</p>
     </footer>
@@ -462,6 +255,10 @@
                 投資人應獨立判斷，審慎評估並自負投資風險。過往績效不代表未來表現。
             </div>
 
+            <!-- Navigation Buttons -->
+            <button class="nav-btn prev" onclick="changeSlide(-1)">&lt;</button>
+            <button class="nav-btn next" onclick="changeSlide(1)">&gt;</button>
+
             <img src="images/line-qr-private.png" alt="LINE QR Code" class="qr-image"
                 style="max-width: 250px; border-radius: 10px;">
             <p class="modal-note" style="margin-top: 1rem; color: #999;">點擊任意處關閉視窗</p>
@@ -470,6 +267,70 @@
 
     <!-- Modal Logic -->
     <script>
+        let currentSlide = 0;
+        const strategySlides = [
+            {
+                type: 'backtest',
+                img: 'images/backtest.png',
+                showHighlights: true,
+                showDisclaimer: true,
+                title: ''
+            },
+            {
+                type: 'topwin',
+                img: 'images/top_win_2_years.png',
+                showHighlights: false,
+                showDisclaimer: true,
+                title: '近兩年最佳交易 (Top 5 Win)'
+            }
+        ];
+
+        function changeSlide(direction) {
+            currentSlide += direction;
+            if (currentSlide >= strategySlides.length) currentSlide = 0;
+            if (currentSlide < 0) currentSlide = strategySlides.length - 1;
+            updateStrategySlide();
+        }
+
+        function updateStrategySlide() {
+            const modal = document.getElementById('qr-modal');
+            const img = modal.querySelector('img');
+            const highlights = modal.querySelector('.strategy-highlights');
+            const disclaimer = modal.querySelector('.strategy-disclaimer');
+            const period = modal.querySelector('.data-period');
+            const title = modal.querySelector('h3');
+
+            const slide = strategySlides[currentSlide];
+
+            img.src = slide.img;
+
+            // Handle Highlights
+            if (highlights) {
+                if (slide.showHighlights) highlights.style.display = 'flex';
+                else highlights.style.display = 'none';
+            }
+
+            // Handle Title (Custom)
+            if (slide.title) {
+                title.innerText = slide.title;
+                title.style.display = 'block';
+                title.style.position = 'absolute';
+                title.style.top = '30px';
+                title.style.width = '100%';
+                title.style.textAlign = 'center';
+                title.style.fontSize = '2rem';
+                title.style.zIndex = '10';
+            } else {
+                title.style.display = 'none';
+            }
+
+            // Handle Period Badge
+            if (period) {
+                if (slide.type === 'topwin') period.style.display = 'none';
+                else period.style.display = '';
+            }
+        }
+
         function openModal(type) {
             var modal = document.getElementById('qr-modal');
             if (!modal) return;
@@ -478,12 +339,24 @@
             var title = modal.querySelector('h3');
             var desc = modal.querySelector('p'); // The first paragraph (description)
             var img = modal.querySelector('img');
+            var navBtns = modal.querySelectorAll('.nav-btn');
 
             // Reset state
             modalContent.classList.remove('fullpage');
             img.style.maxWidth = '';
             title.style.display = 'block';
+            title.style.position = '';
+            title.style.fontSize = '';
             desc.style.display = 'block';
+
+            // Hide nav buttons by default
+            navBtns.forEach(btn => btn.style.display = 'none');
+
+            // Reset CSS overrides
+            var highlights = modal.querySelector('.strategy-highlights');
+            var period = modal.querySelector('.data-period');
+            if (highlights) highlights.style.display = '';
+            if (period) period.style.display = '';
 
             if (type === 'official') {
                 title.innerText = '掃描加入官方帳號';
@@ -492,14 +365,16 @@
                 img.alt = 'Line Official Account QR Code';
                 img.style.maxWidth = '250px';
             } else if (type === 'strategy-info') {
-                // Hide Text Elements for clean chart view
-                title.style.display = 'none';
                 desc.style.display = 'none';
-
-                img.src = 'images/backtest.png';
-                img.alt = 'Strategy Backtest Chart';
-                // Add fullpage class for large chart
                 modalContent.classList.add('fullpage');
+
+                // Show nav buttons
+                navBtns.forEach(btn => btn.style.display = 'flex');
+
+                // Start at slide 0
+                currentSlide = 0;
+                updateStrategySlide();
+
             } else {
                 // Default to private
                 title.innerText = '掃描加 LINE 好友';
