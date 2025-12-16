@@ -270,6 +270,61 @@ h3 {
     font-size: 1.1rem;
 }
 
+/* Value Props Section */
+.value-bg {
+    background-color: #2e2621;
+    /* Deep Espresso from v1 palette */
+    color: #f4f1ea;
+    /* Light Beige */
+    padding: 5rem 5%;
+}
+
+.value-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 3rem;
+    align-items: start;
+}
+
+.value-card {
+    text-align: center;
+    padding: 1rem;
+}
+
+.value-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 1.5rem auto;
+    color: #d4a373;
+    /* Gold/Bronze Accent */
+}
+
+.value-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #f4f1ea;
+    /* Override default header color */
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.en-title {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #a68b51;
+    /* Muted Gold */
+    font-weight: 400;
+}
+
+.value-card p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #d1c7c0;
+    /* Soft Grey-Beige */
+}
+
 /* Enhanced About Section Typography */
 .about-content {
     max-width: 800px;
