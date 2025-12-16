@@ -1125,3 +1125,36 @@ h3 {
         /* Single column for stats */
     }
 }
+
+/* Contact Section Redesign - Simple Icon + Info */
+.contact-methods {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.contact-item {
+    display: flex;
+    flex-direction: column;
+    /* Icon Top, Text Bottom */
+    align-items: center;
+    text-decoration: none;
+    color: var(--text-color);
+    gap: 0.5rem;
+}
+
+.contact-item .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.2rem;
+    color: #6e6159;
+    /* Warm Taupe Icon Color */
+}
+
+.contact-item .value {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
