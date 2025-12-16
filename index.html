@@ -255,9 +255,7 @@
                             class="keep-phrase">投資人應獨立判斷，</span><span
                             class="keep-phrase">審慎評估並自負投資風險。</span>過往績效不代表未來表現。
                     </p>
-                    <a href="#contact" class="btn primary"
-                        onclick="document.querySelector('.contact-box h2').innerText='請留下您的 Email，我將寄送策略邏輯簡報給您';"
-                        style="margin-top: 1.5rem;">
+                    <a href="javascript:void(0)" class="btn primary" onclick="openModal()" style="margin-top: 1.5rem;">
                         <svg class="icon-inline" style="stroke: white;" viewBox="0 0 24 24" stroke-linecap="round"
                             stroke-linejoin="round">
                             <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
@@ -353,15 +351,14 @@
                             class="keep-phrase">自身還款能力、</span><span class="keep-phrase">利率變動風險</span>及<span
                             class="keep-phrase">匯率波動對資產淨值之影響。</span>
                     </p>
-                    <a href="#contact" class="btn primary"
-                        onclick="document.querySelector('.contact-box h2').innerText='請留下您的 Email，我將寄送資產活化現金流試算表給您';"
+                    <a href="javascript:void(0)" class="btn primary" onclick="openModal()"
                         style="margin-top: 1.5rem; background: linear-gradient(135deg, #4a5d85, #2d3b55); box-shadow: 0 4px 15px rgba(45, 59, 85, 0.4);">
                         <svg class="icon-inline" style="stroke: white;" viewBox="0 0 24 24" stroke-linecap="round"
                             stroke-linejoin="round">
                             <line x1="18" y1="20" x2="18" y2="10"></line>
                             <line x1="12" y1="20" x2="12" y2="4"></line>
                             <line x1="6" y1="20" x2="6" y2="14"></line>
-                        </svg> 索取資產活化試算表 (免費諮詢)
+                        </svg> 試算資產活化套利空間 (免費諮詢)
                     </a>
                 </div>
             </div>
@@ -437,10 +434,12 @@
     <div id="qr-modal" class="modal-overlay" onclick="closeModal(event)">
         <div class="modal-content">
             <span class="close-btn" onclick="closeModal(event)">&times;</span>
-            <h3>掃描加入官方帳號</h3>
-            <p>獲取每週量化投資報告</p>
-            <img src="images/line-qr.png" alt="Line Official Account QR Code" class="qr-image">
-            <p class="modal-note">點擊任意處關閉視窗</p>
+            <h3 style="color: var(--primary-color); margin-bottom: 0.5rem;">掃描加 LINE 好友</h3>
+            <p style="color: #666; margin-bottom: 1rem;">索取簡報與試算表<br><span style="font-size: 0.9rem;">ID:
+                    05032015</span></p>
+            <img src="images/line-qr-private.png" alt="LINE QR Code" class="qr-image"
+                style="max-width: 250px; border-radius: 10px;">
+            <p class="modal-note" style="margin-top: 1rem; color: #999;">點擊任意處關閉視窗</p>
         </div>
     </div>
 
