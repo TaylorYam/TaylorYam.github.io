@@ -642,6 +642,63 @@
             modal.classList.add('active');
             document.body.style.overflow = 'hidden';
         }
+        // Updated Slide Logic (Non-cyclic & Button Visibility)
+        function changeSlide(direction) {
+            let newSlide = currentSlide + direction;
+            if (newSlide < 0 || newSlide >= strategySlides.length) return;
+            currentSlide = newSlide;
+            updateStrategySlide();
+        }
+
+        function updateStrategySlide() {
+            const modal = document.getElementById('qr-modal');
+            const img = modal.querySelector('img');
+            const highlights = modal.querySelector('.strategy-highlights');
+            const period = modal.querySelector('.data-period');
+            const title = modal.querySelector('h3');
+            const navPrev = modal.querySelector('.nav-btn.prev');
+            const navNext = modal.querySelector('.nav-btn.next');
+
+            const slide = strategySlides[currentSlide];
+
+            img.src = slide.img;
+
+            // Handle Highlights
+            if (highlights) {
+                if (slide.showHighlights) highlights.style.display = 'flex';
+                else highlights.style.display = 'none';
+            }
+
+            // Handle Title (Custom)
+            if (slide.title) {
+                title.innerText = slide.title;
+                title.style.display = 'block';
+                title.style.position = 'absolute';
+                title.style.top = '30px';
+                title.style.width = '100%';
+                title.style.textAlign = 'center';
+                title.style.fontSize = '2rem';
+                title.style.zIndex = '10';
+            } else {
+                title.style.display = 'none';
+            }
+
+            // Period badge - Hide on slide 2
+            if (period) {
+                if (slide.type !== 'backtest') period.style.display = 'none';
+                else period.style.display = '';
+            }
+
+            // Handle Nav Buttons Visibility
+            if (navPrev) {
+                if (currentSlide === 0) navPrev.style.display = 'none';
+                else navPrev.style.display = 'flex';
+            }
+            if (navNext) {
+                if (currentSlide === strategySlides.length - 1) navNext.style.display = 'none';
+                else navNext.style.display = 'flex';
+            }
+        }
     </script>
 
     <script src="main.js"></script>
