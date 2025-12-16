@@ -590,10 +590,22 @@ h3 {
     align-items: center;
     justify-content: space-between;
     gap: 4rem;
-    /* Removed glass background to let dark theme shine */
     padding: 2rem;
     position: relative;
     z-index: 2;
+    flex-wrap: wrap;
+    /* Allow wrapping */
+}
+
+.strategy-cta {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    order: 10;
+    /* Force to bottom */
+    position: relative;
+    z-index: 5;
 }
 
 .strategy-content {
@@ -941,14 +953,34 @@ h3 {
 
     /* Strategy Section Mobile */
     .strategy-container {
-        flex-direction: column-reverse;
+        flex-direction: column;
+        /* Changed from column-reverse to column */
         padding: 3rem 1.5rem;
         gap: 2rem;
         text-align: center;
     }
 
     .strategy-container.reverse-layout {
-        flex-direction: column-reverse;
+        flex-direction: column;
+        /* Ensure consistence */
+    }
+
+    /* Explicit Order for Mobile Stacking */
+    .strategy-visual {
+        order: 1;
+        /* Image Top */
+        width: 100%;
+    }
+
+    .strategy-content {
+        order: 2;
+        /* Text Middle */
+        width: 100%;
+    }
+
+    .strategy-cta {
+        order: 3;
+        /* Button Bottom */
     }
 
     .strategy-visual {
