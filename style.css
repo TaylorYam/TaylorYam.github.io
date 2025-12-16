@@ -1342,3 +1342,83 @@ footer {
     font-size: 1.1rem;
     font-weight: 500;
 }
+
+/* Strategy Highlights in Modal */
+.strategy-highlights {
+    display: none;
+    /* Hidden by default */
+    width: 100%;
+    margin-bottom: 2rem;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.modal-content.fullpage .strategy-highlights {
+    display: flex;
+    /* Show only in fullpage mode */
+}
+
+.highlight-card {
+    background: rgba(62, 39, 35, 0.05);
+    /* Light Coffee bg */
+    border: 1px solid rgba(62, 39, 35, 0.2);
+    padding: 1.5rem 2rem;
+    border-radius: 12px;
+    text-align: center;
+    min-width: 220px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideUpFade 0.6s ease-out forwards;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.highlight-card:nth-child(2) {
+    animation-delay: 0.2s;
+    /* Staggered animation */
+}
+
+.highlight-card .label {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+    display: block;
+    font-weight: 600;
+}
+
+.highlight-card .value {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #bd2a2a;
+    /* Red for positive return */
+    line-height: 1.2;
+}
+
+.highlight-card .sub-value {
+    font-size: 0.9rem;
+    color: #888;
+    margin-top: 0.4rem;
+}
+
+@keyframes slideUpFade {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.data-period {
+    font-size: 1rem;
+    color: #555;
+    background: #f0f0f0;
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    margin-bottom: 1.5rem;
+    display: none;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.modal-content.fullpage .data-period {
+    display: inline-block;
+}
