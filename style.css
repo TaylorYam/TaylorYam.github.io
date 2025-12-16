@@ -966,16 +966,18 @@ h3 {
     }
 
     /* Explicit Order for Mobile Stacking */
-    .strategy-visual {
+    .strategy-content {
         order: 1;
-        /* Image Top */
+        /* Text First */
         width: 100%;
     }
 
-    .strategy-content {
+    .strategy-visual {
         order: 2;
-        /* Text Middle */
+        /* Visual Second */
         width: 100%;
+        margin-top: 2rem;
+        /* Add spacing between text and visual */
     }
 
     .strategy-cta {
