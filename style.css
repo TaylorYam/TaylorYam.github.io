@@ -398,22 +398,7 @@ h3 {
 /* Responsive Optimizations */
 @media (max-width: 900px) {
 
-    /* Navbar Mobile Styles - Trigger earlier for tablets/large phones */
-    .navbar {
-        flex-direction: column;
-        padding: 1rem;
-        gap: 1rem;
-        background: rgba(244, 241, 234, 0.95);
-    }
-
-    .nav-links {
-        gap: 1.5rem;
-        font-size: 0.95rem;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    /* Strategy Section Mobile */
+    /* Strategy Section Mobile - Wraps earlier for better layout */
     .strategy-container {
         flex-direction: column-reverse;
         padding: 3rem 1.5rem;
