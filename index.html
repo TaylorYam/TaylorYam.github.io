@@ -158,7 +158,8 @@
                             <span class="keep-phrase">不只是下單。</span>協助您<span class="keep-phrase">篩選強勢標的，</span><span
                                 class="keep-phrase">運用動能策略</span><span class="keep-phrase">捕捉波段獲利。</span>
                         </p>
-                        <a href="#contact" class="card-link">諮詢詳情 &rarr;</a>
+                        <a href="javascript:void(0)" class="card-link" onclick="openModal('strategy-info')">查看策略數據
+                            &rarr;</a>
                     </div>
                 </div>
                 <!-- 服務項目 2 -->
@@ -454,6 +455,16 @@
                 desc.style.color = '#666';
                 img.src = 'images/qr-official.png';
                 img.alt = 'Line Official Account QR Code';
+                img.style.maxWidth = '250px'; // Reset size
+            } else if (type === 'strategy-info') {
+                title.innerText = '美股量化動能配置';
+                title.style.color = '#3e2723';
+                desc.innerHTML = '策略歷史回測數據參考';
+                desc.style.color = '#666';
+                img.src = 'images/backtest.png';
+                img.alt = 'Strategy Backtest Chart';
+                // Allow chart to be larger than QR code
+                img.style.maxWidth = '100%';
             } else {
                 // Default to private
                 title.innerText = '掃描加 LINE 好友';
@@ -462,6 +473,7 @@
                 desc.style.color = '#666';
                 img.src = 'images/qr-private.jpg';
                 img.alt = 'Private LINE QR Code';
+                img.style.maxWidth = '250px'; // Reset size
             }
 
             modal.classList.add('active');
