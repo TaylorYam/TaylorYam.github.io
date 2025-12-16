@@ -689,6 +689,13 @@
                 else period.style.display = '';
             }
 
+            // Disclaimer - Hide on slide 2
+            const disclaimer = modal.querySelector('.strategy-disclaimer');
+            if (disclaimer) {
+                if (slide.type !== 'backtest') disclaimer.style.display = 'none';
+                else disclaimer.style.display = 'block';
+            }
+
             // Handle Nav Buttons Visibility
             if (navPrev) {
                 if (currentSlide === 0) navPrev.style.display = 'none';
