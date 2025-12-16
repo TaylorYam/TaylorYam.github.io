@@ -975,24 +975,29 @@ footer {
 }
 
 /* Fullpage Modal Variant */
+/* Fullpage Modal Variant */
 .modal-content.fullpage {
     width: 95% !important;
-    max-width: 1200px !important;
+    max-width: 1400px !important;
+    /* Wider */
     height: 90vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 1.5rem;
+    display: block;
+    /* Block for positioning */
+    position: relative;
+    padding: 0 !important;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 20px;
 }
 
 .modal-content.fullpage .qr-image {
-    max-width: 100% !important;
-    max-height: 75vh !important;
-    width: auto !important;
-    height: auto !important;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: none !important;
+    max-height: none !important;
     object-fit: contain;
     border: none;
+    display: block;
 }
 
 .modal-overlay.active .modal-content {
@@ -1344,12 +1349,13 @@ footer {
 }
 
 /* Strategy Highlights in Modal */
+/* Strategy Highlights in Modal */
 .strategy-highlights {
     display: none;
     /* Hidden by default */
     width: 100%;
     margin-bottom: 2rem;
-    gap: 1.5rem;
+    gap: 2rem;
     justify-content: center;
     flex-wrap: wrap;
 }
@@ -1357,20 +1363,32 @@ footer {
 .modal-content.fullpage .strategy-highlights {
     display: flex;
     /* Show only in fullpage mode */
+    position: absolute;
+    top: 40px;
+    /* Slight offset from top */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    margin: 0;
+    width: 90%;
+    pointer-events: none;
+    /* Let clicks pass through if needed, though cards should block text selection */
 }
 
 .highlight-card {
-    background: #fff;
-    /* White bg */
-    border: none;
-    padding: 1.5rem 2.5rem;
+    background: rgba(255, 255, 255, 0.92);
+    /* High opacity for readability */
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    padding: 1.2rem 2.5rem;
     border-radius: 16px;
     text-align: center;
-    min-width: 240px;
+    min-width: 220px;
     opacity: 0;
-    transform: translateY(20px);
-    animation: slideUpFade 0.6s ease-out forwards;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transform: translateY(-20px);
+    animation: slideDownFade 0.6s ease-out forwards;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1), 0 5px 15px rgba(0, 0, 0, 0.05);
+    pointer-events: auto;
 }
 
 .highlight-card:nth-child(2) {
@@ -1379,29 +1397,32 @@ footer {
 }
 
 .highlight-card .label {
-    font-size: 1.1rem;
-    color: #666;
-    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 0.2rem;
     display: block;
     font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
 }
 
 .highlight-card .value {
-    font-size: 3.5rem;
+    font-size: 3rem;
     font-weight: 800;
-    color: #cc3333;
-    /* Brighter Red */
+    color: #c0392b;
+    /* Deep Red */
     line-height: 1.1;
-    margin: 0.5rem 0;
+    margin: 0.2rem 0;
 }
 
 .highlight-card .sub-value {
-    font-size: 0.9rem;
-    color: #888;
-    margin-top: 0.4rem;
+    font-size: 0.85rem;
+    color: #777;
+    margin-top: 0.2rem;
+    font-weight: 500;
 }
 
-@keyframes slideUpFade {
+@keyframes slideDownFade {
     to {
         opacity: 1;
         transform: translateY(0);
@@ -1409,17 +1430,24 @@ footer {
 }
 
 .data-period {
-    font-size: 1rem;
+    font-size: 0.9rem;
     color: #555;
-    background: #f0f0f0;
-    padding: 0.5rem 1.5rem;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(5px);
+    padding: 0.4rem 1.2rem;
     border-radius: 50px;
-    margin-bottom: 1.5rem;
     display: none;
     font-weight: 500;
     letter-spacing: 0.5px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 .modal-content.fullpage .data-period {
     display: inline-block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    /* Top Right corner */
+    z-index: 10;
+    margin: 0;
 }
