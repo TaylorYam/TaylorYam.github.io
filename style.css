@@ -63,11 +63,27 @@ h3 {
     display: inline-block;
 }
 
-.text-gradient {
-    background: linear-gradient(135deg, var(--primary-color), #0a4f9e);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+/* Typography */
+h1,
+h2,
+h3 {
+    font-weight: 800;
+    line-height: 1.3;
+    color: var(--primary-color);
+    text-wrap: balance;
+    /* Modern browsers balance text */
+    word-break: keep-all;
+    /* Prevent CJK char breaking mid-word if possible */
+}
+
+.hero-title {
+    color: #967d46;
+    /* Matching the Premium Gold from v1 palette explicitly */
+    font-size: 3rem;
+    /* Make it big */
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
 }
 
 .highlight {
