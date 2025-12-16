@@ -1165,10 +1165,10 @@ footer {
     /* Hero Section Mobile */
     .hero {
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
         text-align: center;
-        padding: 120px 1.5rem 4rem 1.5rem;
+        padding: 100px 1.5rem 2rem 1.5rem;
         /* More top padding for stacked navbar */
         min-height: auto;
         /* Remove fixed height constraint */
@@ -1182,15 +1182,15 @@ footer {
     .hero-content {
         order: 2;
         width: 100%;
-        text-align: left;
-        /* Left align on mobile */
-        padding: 0 1.5rem;
+        text-align: center;
+        /* Center text on mobile */
+        padding: 0 1rem;
         /* Add horizontal padding */
     }
 
     .hero-buttons {
-        justify-content: flex-start;
-        /* Left align buttons */
+        justify-content: center;
+        /* Center buttons */
     }
 
     .hero-visual {
@@ -1202,8 +1202,8 @@ footer {
     }
 
     .profile-container {
-        width: 260px;
-        height: 260px;
+        width: 220px;
+        height: 220px;
     }
 
     .hero-title {
