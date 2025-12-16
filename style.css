@@ -1,20 +1,20 @@
 :root {
-    /* Earth Tone Palette - Elegant Beige (Light Mode) */
-    --bg-color: #f4f1ea;
-    /* Warm Beige / Linen */
-    --text-color: #2e2621;
-    /* Deep Espresso - Warmer than grey */
-    --primary-color: #967d46;
-    /* Rich Gold */
-    --secondary-color: #6e857b;
-    /* Muted Sage */
-    --accent-color: #d17b5a;
-    /* Deep Terracotta */
+    /* Presidential Financial Palette - Deep Navy & White */
+    --bg-color: #ffffff;
+    /* Pure White */
+    --text-color: #1f2937;
+    /* Dark Charcoal / Very Dark Blue-Grey */
+    --primary-color: #002868;
+    /* Presidential Navy Blue */
+    --secondary-color: #8a1538;
+    /* Deep Red (Accent) - Optional usage */
+    --accent-color: #a68b51;
+    /* Muted Gold (for prestige) */
 
-    --glass-bg: rgba(255, 255, 255, 0.65);
-    /* Frosted white glass */
-    --glass-border: rgba(166, 139, 81, 0.2);
-    /* Subtle luxurious border */
+    --glass-bg: rgba(255, 255, 255, 0.9);
+    /* Cleaner, less transparent white */
+    --glass-border: rgba(0, 40, 104, 0.15);
+    /* Subtle Navy border */
 
     --font-main: 'Outfit', sans-serif;
     --spacing-md: 2rem;
@@ -51,21 +51,21 @@ h2,
 h3 {
     font-weight: 800;
     line-height: 1.2;
+    color: var(--primary-color);
+    /* Headers now Navy */
 }
 
 .text-gradient {
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color), var(--accent-color));
+    background: linear-gradient(135deg, var(--primary-color), #0a4f9e);
+    /* Navy to Lighter Blue */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
 
 .highlight {
-    color: var(--primary-color);
-}
-
-.nowrap {
-    white-space: nowrap;
+    color: var(--secondary-color);
+    /* Highlight in Red/Accent */
 }
 
 /* Navbar */
@@ -78,68 +78,32 @@ h3 {
     width: 100%;
     top: 0;
     z-index: 1000;
-    background: rgba(244, 241, 234, 0.85);
-    /* Matches new beige bg */
+    background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--glass-border);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    /* Subtle shadow for depth */
 }
 
 .logo {
     font-size: 1.5rem;
     font-weight: 800;
     letter-spacing: -0.05em;
-    background: linear-gradient(to right, #a68b51, #3d3a36);
-    /* Gold to Dark Grey */
+    background: linear-gradient(to right, var(--primary-color), var(--text-color));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-.nav-links {
-    display: flex;
-    gap: 2rem;
-}
-
-.nav-links a:hover {
-    color: var(--primary-color);
-}
-
-.theme-toggle {
-    background: none;
-    border: none;
-    color: var(--text-color);
-    cursor: pointer;
-    padding: 0.5rem;
-}
-
 /* Hero Section */
-.hero {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 10%;
-    position: relative;
-    overflow: hidden;
-}
-
-.hero-content {
-    max-width: 600px;
-    z-index: 2;
-}
-
-.hero-title {
-    font-size: 4rem;
-    margin-bottom: 1rem;
-}
-
 .hero-subtitle {
     font-size: 1.5rem;
-    color: #6e6159;
-    /* Warm Taupe */
+    color: #4b5563;
+    /* Cool Grey */
     margin-bottom: 2rem;
 }
 
 .hero-visual {
+    /* ... existing content ... */
     position: relative;
     /* Adjust positioning to align better */
     display: flex;
@@ -148,265 +112,100 @@ h3 {
     z-index: 1;
 }
 
-.profile-container {
-    position: relative;
-    width: 320px;
-    /* Refined professional size */
-    height: 320px;
-}
-
-.profile-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center 15%;
-    /* Keep hair visible */
-    border-radius: 50%;
-    /* Circular profile */
-    border: 4px solid rgba(255, 255, 255, 0.8);
-    /* Thinner, cleaner border */
-    box-shadow: 0 15px 30px rgba(46, 38, 33, 0.1);
-    /* Subtle professional shadow */
-    position: relative;
-    z-index: 2;
-    transition: transform 0.3s ease;
-}
-
-.profile-image:hover {
-    transform: scale(1.02);
-}
-
-.profile-glow {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 110%;
-    height: 110%;
-    background: radial-gradient(circle, var(--primary-color), transparent 60%);
-    opacity: 0.3;
-    z-index: 1;
-    filter: blur(40px);
-}
-
-/* Buttons */
-.btn {
-    display: inline-block;
-    padding: 0.8rem 2rem;
-    border-radius: 50px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-
+/* Buttons have to be updated via primary color var automatically */
 .btn.primary {
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    background: var(--primary-color);
+    /* Solid Navy */
     color: white;
-    box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
+    box-shadow: 0 4px 15px rgba(0, 40, 104, 0.3);
+}
+
+.btn.primary:hover {
+    background: #1a4480;
+    /* Lighter Navy on hover */
+    transform: translateY(-2px);
 }
 
 .btn.secondary {
-    background: transparent;
-    border: 2px solid var(--primary-color);
-    /* Thicker, colored border */
+    border-color: var(--primary-color);
     color: var(--primary-color);
-    margin-left: 1rem;
-    font-weight: 700;
 }
 
 .btn.secondary:hover {
-    background: var(--primary-color);
-    color: #fff;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 10px rgba(150, 125, 70, 0.3);
+    background-color: var(--primary-color);
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 40, 104, 0.2);
 }
 
-/* Specific Dark Button for Strategy */
+/* Specific Dark Button for Strategy (previously Espresso) now simpler */
 .btn.secondary.btn-dark {
-    border-color: #5c4d42;
-    /* Dark Espresso */
-    color: #5c4d42;
+    border-color: var(--text-color);
+    color: var(--text-color);
 }
 
 .btn.secondary.btn-dark:hover {
-    background: #5c4d42;
+    background: var(--text-color);
     color: #fff;
-    box-shadow: 0 4px 10px rgba(92, 77, 66, 0.3);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-.btn:hover {
-    transform: translateY(-2px);
+.placeholder-gradient-1 {
+    background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
+    /* Deep Blue */
+}
+
+/* Ancient Gold -> Silver/Platinum */
+.placeholder-gradient-2 {
+    background: linear-gradient(135deg, #94a3b8 0%, #475569 100%);
+    /* Cool Silver/Slate */
+}
+
+/* Deep Sage -> Muted Blue */
+.placeholder-gradient-3 {
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+    /* Bright Royal Blue */
 }
 
 /* Section Common */
-.section {
-    padding: 6rem 5%;
-}
-
 .alt-bg {
-    background-color: #e8e4dc;
-    /* Warm Grey / Latte */
-    border-top: 1px solid var(--glass-border);
-    border-bottom: 1px solid var(--glass-border);
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.section-title {
-    font-size: 2.5rem;
-    margin-bottom: 3rem;
-    text-align: center;
+    background-color: #f3f4f6;
+    /* Cool Light Grey */
+    border-top: 1px solid #e5e7eb;
+    border-bottom: 1px solid #e5e7eb;
 }
 
 .section-desc {
     text-align: center;
     max-width: 700px;
     margin: 0 auto 4rem auto;
-    color: #6e6159;
-    /* Warm Taupe */
+    color: #4b5563;
+    /* Cool Grey */
     font-size: 1.1rem;
 }
 
 /* Enhanced About Section Typography */
-.about-content {
-    max-width: 800px;
-    margin: 0 auto 4rem auto;
-    text-align: center;
-}
-
-.about-intro {
-    font-size: 1.4rem;
-    font-weight: 600;
-    color: var(--text-color);
-    margin-bottom: 2rem;
-    line-height: 1.5;
-}
-
 .about-details {
     font-size: 1.15rem;
-    color: #5a504a;
-    /* Slightly warmer than standard grey */
+    color: #374151;
+    /* Darker Slate */
     line-height: 1.8;
     max-width: 720px;
     margin: 0 auto;
-    /* Optional: text-align: justify; if preferred, but center is cleaner for short bios */
-}
-
-/* Stats */
-.stats-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 2rem;
-    text-align: center;
-}
-
-.stat-card {
-    background: var(--glass-bg);
-    padding: 2rem;
-    border-radius: 16px;
-    border: 1px solid var(--glass-border);
-    transition: transform 0.3s;
-}
-
-.stat-card:hover {
-    transform: translateY(-5px);
-    background: rgba(255, 255, 255, 0.4);
 }
 
 .stat-card h3 {
-    font-size: 3rem;
     color: var(--primary-color);
-    margin-bottom: 0.5rem;
-}
-
-/* Portfolio Grid */
-.portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-}
-
-.project-card {
-    background: var(--glass-bg);
-    border-radius: 20px;
-    overflow: hidden;
-    border: 1px solid var(--glass-border);
-    transition: transform 0.3s;
-}
-
-.project-card:hover {
-    transform: translateY(-5px);
-}
-
-.card-image {
-    height: 200px;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    /* Centering the icon */
-    justify-content: center;
-    align-items: center;
-    position: relative;
-}
-
-.service-icon {
-    width: 80px;
-    height: 80px;
-    color: rgba(255, 255, 255, 0.7);
-    /* Subtle white */
-    transition: transform 0.3s ease, color 0.3s ease;
-}
-
-.project-card:hover .service-icon {
-    transform: scale(1.1);
-    /* Gentle zoom on hover */
-    color: rgba(255, 255, 255, 0.95);
-}
-
-.placeholder-gradient-1 {
-    background: linear-gradient(135deg, #d4b06f 0%, #aa9369 100%);
-}
-
-/* Ancient Gold */
-.placeholder-gradient-2 {
-    background: linear-gradient(135deg, #8da399 0%, #5d6e64 100%);
-}
-
-/* Deep Sage */
-.placeholder-gradient-3 {
-    background: linear-gradient(135deg, #c98e72 0%, #8f5c45 100%);
-}
-
-/* Terracotta */
-
-.card-content {
-    padding: 1.5rem;
-}
-
-.card-content h3 {
-    margin-bottom: 0.5rem;
-    font-size: 1.4rem;
 }
 
 .card-content p {
-    font-size: 0.95rem;
-    color: #6e6159;
-    /* Warm Taupe */
-    margin-bottom: 1.5rem;
-}
-
-.card-link {
-    color: var(--primary-color);
-    font-weight: 600;
-    font-size: 0.9rem;
+    color: #4b5563;
+    /* Cool Grey */
 }
 
 /* Contact */
 .contact-box {
-    background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(168, 85, 247, 0.1));
+    background: linear-gradient(135deg, rgba(0, 40, 104, 0.05), rgba(30, 64, 175, 0.05));
+    /* Subtle Navy Gradient */
     padding: 4rem;
     border-radius: 30px;
     text-align: center;
@@ -417,54 +216,25 @@ h3 {
     margin-bottom: 1rem;
 }
 
-/* Strategy Section (New) - Quant/Stock (Dark Warm Brown) */
+/* Strategy Section (New) - Quant/Stock */
 .strategy-bg {
-    background-color: #3d342b;
-    /* Dark Espresso/Bronze */
+    background-color: var(--primary-color);
+    /* Deep Navy */
     position: relative;
     overflow: hidden;
-    color: #f4f1ea;
-    /* Light Beige Text for high contrast */
-}
-
-.strategy-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 4rem;
-    /* Removed glass background to let dark theme shine */
-    padding: 2rem;
-    position: relative;
-    z-index: 2;
-}
-
-.strategy-content {
-    flex: 1;
-}
-
-.badge {
-    display: inline-block;
-    background: var(--primary-color);
-    color: #fff;
-    padding: 0.3rem 0.8rem;
-    border-radius: 4px;
-    font-size: 0.8rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    letter-spacing: 1px;
+    color: #ffffff;
 }
 
 .strategy-title {
     font-size: 2.8rem;
     margin-bottom: 1.5rem;
-    color: #e6dace;
-    /* Lighter Cream for Title */
+    color: #ffffff;
 }
 
 .strategy-desc {
     font-size: 1.1rem;
-    color: #d1c7c0;
-    /* Light Grey-Brown for body text */
+    color: #e5e7eb;
+    /* Very Light Grey */
     margin-bottom: 2rem;
     line-height: 1.8;
 }
@@ -492,11 +262,11 @@ h3 {
     border-radius: 50%;
     background: conic-gradient(var(--primary-color) 0% 25%,
             /* Stock 1 */
-            var(--secondary-color) 25% 50%,
+            #1e3a8a 25% 50%,
             /* Stock 2 */
-            var(--accent-color) 50% 75%,
+            #3b82f6 50% 75%,
             /* Stock 3 */
-            #6e6159 75% 100%
+            #64748b 75% 100%
             /* Stock 4 (Warm Taupe) */
         );
     position: relative;
@@ -547,7 +317,7 @@ h3 {
 
 /* Strategy Section Alt (Dark Theme) */
 .strategy-bg-alt {
-    background: #1a1e26;
+    background: #1e293b;
     /* Dark Blue-Grey Theme for Asset Activation */
     position: relative;
     color: #e8e6e1;
@@ -596,7 +366,8 @@ h3 {
 
 .balance-arrow {
     font-weight: 800;
-    color: #4a5d85;
+    color: var(--primary-color);
+    /* Arrow text now Navy */
     font-size: 1.2rem;
     text-align: center;
     background: #fff;
