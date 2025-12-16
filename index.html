@@ -211,7 +211,7 @@
             <div class="strategy-container">
                 <div class="strategy-content">
                     <span class="badge">量化思維分享</span>
-                    <h2 class="strategy-title">美股全天候量化投資邏輯</h2>
+                    <h2 class="strategy-title">美股全天候量化投資策略</h2>
                     <p class="strategy-desc">
                         <span class="keep-phrase">不再被動承受市場波動。</span>本策略架構採用<span
                             class="keep-phrase"><strong>「牛熊分流機制」</strong>，</span>以 <strong>S&P 500 與 200
@@ -263,10 +263,7 @@
                             <span>Quant<br>Logic</span>
                         </div>
                     </div>
-                </div>
-
-                <!-- CTA Button Moved to Bottom -->
-                <div class="strategy-cta">
+                    <!-- CTA Button Moved Here -->
                     <a href="javascript:void(0)" class="btn primary" onclick="openModal('private')">
                         <svg class="icon-inline" style="stroke: white;" viewBox="0 0 24 24" stroke-linecap="round"
                             stroke-linejoin="round">
@@ -358,9 +355,19 @@
                     </p>
                 </div>
 
-
-                <!-- CTA Button Moved to Bottom -->
-                <div class="strategy-cta">
+                <div class="strategy-visual">
+                    <!-- Removed Chart as requested per previous step, but user logic implies keeping structure. 
+                         Wait, user previously asked to REMOVE chart for Real Estate but KEEP for Quant. 
+                         However, now user asks to move button "below chart".
+                         Since Real Estate has no chart, let's just put it in the Visual div (which is empty or present).
+                         Checking file... Real Estate Visual div was removed in Step 1072? 
+                         Ah, wait. Let's check if .strategy-visual exists in Real Estate. -->
+                    <!-- In Step 1072, I removed the content inside .strategy-visual AND the div itself? 
+                         No, I removed the div entirely. 
+                         So I need to re-create the div for layout consistency if I want the button on the right?
+                         User said "Align Quant with Real Estate" (text left, title center) BUT now "Try putting button below right chart".
+                         Maybe only for Quant? But usually symmetry is good. 
+                         Let's re-introduce .strategy-visual for Real Estate just to hold the button on the layout side. -->
                     <a href="javascript:void(0)" class="btn primary" onclick="openModal('private')"
                         style="background: linear-gradient(135deg, #4a5d85, #2d3b55); box-shadow: 0 4px 15px rgba(45, 59, 85, 0.4);">
                         <svg class="icon-inline" style="stroke: white;" viewBox="0 0 24 24" stroke-linecap="round"
