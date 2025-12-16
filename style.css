@@ -1364,8 +1364,8 @@ footer {
     display: flex;
     /* Show only in fullpage mode */
     position: absolute;
-    top: 40px;
-    /* Slight offset from top */
+    top: 80px;
+    /* Offset from top to clear data-period */
     left: 50%;
     transform: translateX(-50%);
     z-index: 10;
@@ -1446,8 +1446,8 @@ footer {
     display: inline-block;
     position: absolute;
     top: 20px;
-    left: 20px;
-    /* Moved to Left */
+    left: 50%;
+    transform: translateX(-50%);
     right: auto;
     z-index: 10;
     margin: 0;
