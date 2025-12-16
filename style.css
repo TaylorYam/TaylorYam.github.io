@@ -104,9 +104,12 @@ h3 {
 }
 
 .text-highlight {
-    color: #d17b5a;
-    /* Terracotta / Red Highlight */
+    color: #a68b51;
     font-weight: 700;
+}
+
+.mobile-br {
+    display: none;
 }
 
 .hero-title {
@@ -1050,10 +1053,23 @@ h3 {
         /* Remove fixed height constraint */
     }
 
+    /* Utility for Mobile */
+    .mobile-br {
+        display: block;
+    }
+
     .hero-content {
         order: 2;
-        /* Content below image */
         width: 100%;
+        text-align: left;
+        /* Left align on mobile */
+        padding: 0 1.5rem;
+        /* Add horizontal padding */
+    }
+
+    .hero-buttons {
+        justify-content: flex-start;
+        /* Left align buttons */
     }
 
     .hero-visual {
