@@ -536,64 +536,7 @@
             }
         }
 
-        function openModal(type) {
-            var modal = document.getElementById('qr-modal');
-            if (!modal) return;
 
-            var modalContent = modal.querySelector('.modal-content');
-            var title = modal.querySelector('h3');
-            var desc = modal.querySelector('p'); // The first paragraph (description)
-            var img = modal.querySelector('img');
-
-            // Reset state
-            modalContent.classList.remove('fullpage');
-            img.style.maxWidth = '';
-            title.style.display = 'block';
-            desc.style.display = 'block';
-
-            if (type === 'official') {
-                title.innerText = '掃描加入官方帳號';
-                desc.innerHTML = '獲取每週量化投資報告';
-                img.src = 'images/qr-official.png';
-                img.alt = 'Line Official Account QR Code';
-                img.style.maxWidth = '250px';
-            } else if (type === 'strategy-info') {
-                // Hide Text Elements for clean chart view
-                title.style.display = 'none';
-                desc.style.display = 'none';
-
-                img.src = 'images/backtest.png';
-                img.alt = 'Strategy Backtest Chart';
-                // Add fullpage class for large chart
-                modalContent.classList.add('fullpage');
-            } else if (type === 'dca-info') {
-                // New DCA Strategy Modal
-                title.style.display = 'none';
-                desc.style.display = 'none';
-
-                img.src = 'images/SPY_DCA_2015.png';
-                img.alt = 'DCA Strategy Chart';
-                // Add fullpage class for large chart
-                modalContent.classList.add('fullpage');
-            } else {
-                // Default to private
-                title.innerText = '掃描加 LINE 好友';
-                desc.innerHTML = '索取簡報與試算表<br><span style="font-size: 0.9rem;">ID: 05032015</span>';
-                img.src = 'images/qr-private.jpg';
-                img.alt = 'Private LINE QR Code';
-                img.style.maxWidth = '250px';
-            }
-
-            modal.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeModal(event) {
-            if (event.target.id === 'qr-modal' || event.target.classList.contains('close-btn')) {
-                document.getElementById('qr-modal').classList.remove('active');
-                document.body.style.overflow = '';
-            }
-        }
         // Updated openModal to support slideshow
         function openModal(type) {
             var modal = document.getElementById('qr-modal');
@@ -640,7 +583,20 @@
 
                 // Start at slide 0
                 currentSlide = 0;
+                currentSlide = 0;
                 updateStrategySlide();
+
+            } else if (type === 'dca-info') {
+                // New DCA Strategy Modal Logic
+                title.style.display = 'none';
+                desc.style.display = 'none';
+
+                img.src = 'images/SPY_DCA_2015.png';
+                img.alt = 'DCA Strategy Chart';
+                img.style.display = 'block';
+
+                // Add fullpage class for large chart
+                modalContent.classList.add('fullpage');
 
             } else {
                 // Default to private
