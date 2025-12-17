@@ -614,52 +614,55 @@
             } else if (type === 'dca-info') {
                 // New DCA Strategy Modal Logic
 
-                // 1. Set Title
-                title.innerText = '每個月定期定額 300 美金投資 SPY';
+                // 1. Set Title & Date (Merged for horizontal layout)
+                // Use non-breaking space or span to separate
+                title.innerHTML = '每個月定期定額 300 美金投資 SPY <span style="font-size: 0.8em; font-weight: normal; margin-left: 10px; color: #666;">(回測期間：2015/01 - 2025/11)</span>';
                 title.style.display = 'block';
-                title.style.position = 'relative'; // Use relative flow
-                title.style.marginTop = '1rem';    // Space from top
-                title.style.marginBottom = '0.5rem';
-                title.style.color = 'var(--primary-color)';
+
+                // Overlay Style (Same as Strategy Info)
+                title.style.position = 'absolute';
+                title.style.top = '30px';
+                title.style.width = '100%';
+                title.style.textAlign = 'center';
+                title.style.marginTop = '0';
+                title.style.marginBottom = '0';
+                title.style.zIndex = '20'; // Ensure on top
 
                 desc.style.display = 'none';
 
-                // 2. Update Highlights Data
+                // 2. Update Highlights Data (Overlay)
                 if (highlights) {
                     highlights.style.display = 'flex';
-                    // Need to target specific values. Assuming order: [0]=Total, [1]=CAGR
+                    // highlights usually have absolute positioning in css, ensure it's kept
+                    // If not, we might need to enforce it, but typically it is.
                     const values = highlights.querySelectorAll('.value');
                     const subs = highlights.querySelectorAll('.sub-value');
 
                     if (values.length >= 2) {
-                        values[0].innerText = '107.09%'; // Total Return
-                        values[1].innerText = '6.92%';   // CAGR
+                        values[0].innerText = '107.09%';
+                        values[1].innerText = '6.92%';
                     }
                     if (subs.length >= 2) {
-                        subs[0].style.display = 'none'; // Hide vs SPY
-                        subs[1].style.display = 'none'; // Hide vs SPY
+                        subs[0].style.display = 'none';
+                        subs[1].style.display = 'none';
                     }
                 }
 
-                // 3. Update Period & Layout
+                // 3. Hide separate period element (Merged into title)
                 if (period) {
-                    period.innerText = '回測期間：2015/01 - 2025/11';
-                    period.style.display = 'block';
-                    // Move period below title to avoid overlap
-                    period.style.position = 'relative';
-                    period.style.top = 'auto';
-                    period.style.right = 'auto';
-                    period.style.marginTop = '0';
-                    period.style.marginBottom = '1rem';
+                    period.style.display = 'none';
                 }
 
                 img.src = 'images/SPY_DCA_2015.png';
                 img.alt = 'DCA Strategy Chart';
                 img.style.display = 'block';
+                // Adjust image padding if needed to show title? 
+                // Usually fullpage chart might be covered by title. 
+                // But user requested "overlay properly".
 
                 // Add fullpage class for large chart
                 modalContent.classList.add('fullpage');
-                modalContent.style.backgroundColor = '#f4f1ea'; // Ensure bg color
+                modalContent.style.backgroundColor = '#f4f1ea';
 
             } else {  // Default to private
                 title.innerText = '掃描加 LINE 好友';
