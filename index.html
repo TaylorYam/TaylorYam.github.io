@@ -207,7 +207,13 @@
                         <h3>穩定現金流規劃</h3>
 
                         <p>保本優先。嚴選高評級美元企業債，建構穩定的現金流系統。</p>
-                        <a href="#" onclick="openModal('bond-info'); return false;" class="text-link">了解更多 &rarr;</a>
+                        <div class="card-actions"
+                            style="display: flex; flex-direction: column; gap: 0.8rem; margin-top: 1rem;">
+                            <a href="#" onclick="openModal('bond-info'); return false;" class="card-link">實際現金流展示
+                                &rarr;</a>
+                            <a href="#" onclick="openModal('private'); return false;" class="btn primary"
+                                style="padding: 0.5rem 1rem; font-size: 0.9rem; width: fit-content;">立即客製化現金流</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -688,6 +694,7 @@
                 // Hide other elements
                 if (highlights) highlights.style.display = 'none';
                 if (period) period.style.display = 'none';
+                if (disclaimer) disclaimer.style.display = 'none'; // Hide disclaimer
 
                 // Set image
                 img.src = 'images/BOND.png';
