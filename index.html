@@ -721,19 +721,23 @@
             if (slide.title) {
                 title.innerHTML = slide.title; // Use innerHTML to support span
                 title.style.display = 'block';
-                title.style.position = 'absolute';
-                title.style.top = '30px';
+                // User requested NO OVERLAP for this title
+                title.style.position = 'relative';
+                title.style.top = 'auto';
                 title.style.width = '100%';
                 title.style.textAlign = 'center';
-                title.style.fontSize = '2rem';
-                title.style.zIndex = '10';
+                title.style.fontSize = '1.6rem';
+                title.style.zIndex = '20';
+                title.style.marginTop = '1rem';
+                title.style.marginBottom = '0.5rem';
             } else {
                 title.style.display = 'none';
             }
 
-            // Period badge - Hide on slide 2
+            // Period badge - Strictly hide if title is present to avoid duplication
             if (period) {
-                if (slide.type !== 'backtest') period.style.display = 'none';
+                if (slide.title) period.style.display = 'none';
+                else if (slide.type !== 'backtest') period.style.display = 'none';
                 else period.style.display = '';
             }
 
