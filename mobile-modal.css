@@ -197,3 +197,32 @@
         justify-content: center;
     }
 }
+
+/* Force Center Alignment Specifically for Strategy (Brown) Section */
+@media (max-width: 900px) {
+    #strategy .strategy-container {
+        flex-direction: column !important;
+        text-align: center !important;
+        align-items: center !important;
+    }
+
+    #strategy .strategy-content {
+        align-items: center !important;
+        text-align: center !important;
+    }
+
+    #strategy .strategy-desc {
+        text-align: center !important;
+        max-width: 100% !important;
+    }
+
+    #strategy .strategy-features {
+        align-items: center !important;
+        text-align: center !important;
+    }
+    
+    #strategy .strategy-features li {
+        text-align: center !important;
+        justify-content: center !important;
+    }
+}
