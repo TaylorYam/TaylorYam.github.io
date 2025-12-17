@@ -70,28 +70,35 @@
         flex: 1;
         min-width: 0;
         /* Allow shrinking */
-        padding: 10px 5px !important;
+        padding: 6px 4px !important;
+        /* Compact padding */
         margin: 0 !important;
         background: #ffffff;
         /* Explicit card background */
-        border-radius: 8px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        border-radius: 6px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
     }
 
-    /* Shrink fonts inside cards */
+    /* Shrink fonts inside cards significantly */
     .modal-content.fullpage .highlight-card .label {
-        font-size: 0.75rem !important;
+        font-size: 0.65rem !important;
+        /* Very small label */
         margin-bottom: 2px;
+        color: #888;
     }
 
     .modal-content.fullpage .highlight-card .value {
-        font-size: 1.6rem !important;
-        /* Smaller than desktop */
+        font-size: 1.1rem !important;
+        /* Design requested ~50% reduction */
+        font-weight: 700;
         line-height: 1.2;
+        color: #c0392b;
+        /* Keep red color */
     }
 
     .modal-content.fullpage .highlight-card .sub-value {
-        font-size: 0.7rem !important;
+        font-size: 0.6rem !important;
+        color: #999;
     }
 
     /* Image: Order 3 */
