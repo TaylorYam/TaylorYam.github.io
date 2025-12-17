@@ -578,11 +578,15 @@
                 desc.style.display = 'none';
                 modalContent.classList.add('fullpage');
 
+                // Restore default period for Strategy Info
+                if (period) {
+                    period.innerText = '回測期間：2020/01 - 2025/11';
+                    // period.style.display is handled by updateStrategySlide
+                }
+
                 // Show nav buttons
                 navBtns.forEach(btn => btn.style.display = 'flex');
 
-                // Start at slide 0
-                currentSlide = 0;
                 currentSlide = 0;
                 updateStrategySlide();
 
@@ -591,6 +595,15 @@
                 title.style.display = 'none';
                 desc.style.display = 'none';
 
+                // Hide momentum strategy highlights
+                if (highlights) highlights.style.display = 'none';
+
+                // Update period text for DCA
+                if (period) {
+                    period.innerText = '回測期間：2015/01 - 2025/11';
+                    period.style.display = 'block';
+                }
+
                 img.src = 'images/SPY_DCA_2015.png';
                 img.alt = 'DCA Strategy Chart';
                 img.style.display = 'block';
@@ -598,8 +611,7 @@
                 // Add fullpage class for large chart
                 modalContent.classList.add('fullpage');
 
-            } else {
-                // Default to private
+            } else {  // Default to private
                 title.innerText = '掃描加 LINE 好友';
                 desc.innerHTML = '索取簡報與試算表<br><span style="font-size: 0.9rem;">ID: 05032015</span>';
                 img.src = 'images/qr-private.jpg';
@@ -672,6 +684,13 @@
             if (navNext) {
                 if (currentSlide === strategySlides.length - 1) navNext.style.display = 'none';
                 else navNext.style.display = 'flex';
+            }
+        }
+
+        function closeModal(event) {
+            if (event.target.id === 'qr-modal' || event.target.classList.contains('close-btn')) {
+                document.getElementById('qr-modal').classList.remove('active');
+                document.body.style.overflow = '';
             }
         }
     </script>
