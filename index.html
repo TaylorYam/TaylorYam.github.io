@@ -456,7 +456,7 @@
                     <div class="sub-value">(vs SPY 110.35%)</div>
                 </div>
                 <div class="highlight-card">
-                    <span class="label">年化報酬率 (CAGR)</span>
+                    <span class="label">回測年化報酬率 (CAGR)</span>
                     <div class="value">29.64%</div>
                     <div class="sub-value">(vs SPY 13.33%)</div>
                 </div>
@@ -579,7 +579,7 @@
                 modalContent.classList.add('fullpage');
                 modalContent.style.backgroundColor = ''; // Reset bg
 
-                // Restore default period
+                // Restore default period for Strategy Info
                 if (period) {
                     period.innerText = '回測期間：2020/01 - 2025/11';
                     // Restyle period back to absolute (default CSS)
@@ -588,6 +588,12 @@
                     period.style.right = '';
                     period.style.marginTop = '';
                     period.style.marginBottom = '';
+                }
+
+                // Restore Disclaimer (Momentum Strategy)
+                if (disclaimer) {
+                    disclaimer.innerHTML = '⚠️ 本策略僅為程式交易邏輯分享，不代表對未來獲利之保證。<br>投資人應獨立判斷，審慎評估並自負投資風險。過往績效不代表未來表現。';
+                    disclaimer.style.display = 'block';
                 }
 
                 // Restore Highlights Data (Momentum Strategy)
@@ -651,6 +657,13 @@
                 // 3. Hide separate period element (Merged into title)
                 if (period) {
                     period.style.display = 'none';
+                }
+
+                // 4. Set Custom Disclaimer for DCA
+                if (disclaimer) {
+                    disclaimer.innerHTML = '投資涉及風險，包括市場波動、匯率變化及本金損失之可能。<br>定期定額（平均成本法）並非獲利保證，亦無法完全規避市場下跌風險。過往回測績效不代表未來表現。';
+                    disclaimer.style.display = 'block';
+                    // Ensure overlap/position if needed, but default absolute bottom is fine
                 }
 
                 img.src = 'images/SPY_DCA_2015.png';
