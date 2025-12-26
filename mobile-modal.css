@@ -160,20 +160,23 @@
         height: 40px;
         font-size: 1.5rem;
         border-radius: 50%;
-        background: rgba(255, 255, 255, 0.8);
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        z-index: 50;
+        background: rgba(255, 255, 255, 0.9);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        position: fixed;
+        /* Fixed to viewport usually works better, but here absolute relative to modal container */
+        top: auto;
+        bottom: 20px;
+        transform: none;
+        z-index: 60;
     }
 
     .modal-content.fullpage .nav-btn.prev {
-        left: 10px;
+        left: 20px;
     }
 
     .modal-content.fullpage .nav-btn.next {
-        right: 10px;
+        right: 20px;
+        left: auto;
     }
 
     /* Hide the small note */
