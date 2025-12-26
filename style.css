@@ -1209,8 +1209,16 @@ footer {
     .nav-links {
         gap: 1.5rem;
         font-size: 0.95rem;
-        flex-wrap: wrap;
-        justify-content: center;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        overflow-x: auto;
+        width: 100%;
+        padding-bottom: 5px;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .nav-links li {
+        flex-shrink: 0;
     }
 
     /* Strategy Section Mobile */
@@ -1333,8 +1341,11 @@ footer {
     .nav-links {
         gap: 1.5rem;
         font-size: 0.95rem;
-        flex-wrap: wrap;
-        justify-content: center;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        overflow-x: auto;
+        width: 100%;
+        padding-bottom: 5px;
     }
 
     /* Hero Section Mobile */
