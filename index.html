@@ -395,7 +395,24 @@
         </div>
     </section>
 
-
+    <!-- Weekly Reports Section -->
+    <section id="weekly-reports" class="section">
+        <div class="container">
+            <h2 class="section-title text-center" style="margin-bottom: 3rem; color: #4a5d85; text-align: center;">
+                精選週報分享</h2>
+            <div class="report-grid">
+                <!-- Report Card 1 -->
+                <div class="report-card" onclick="openModal('report-1212')">
+                    <img src="images/weekly_1212/1.png" alt="Taylor's Take 12/12" class="report-thumbnail">
+                    <div class="report-info">
+                        <span class="report-date">2025/12/12</span>
+                        <h3 class="report-title">降息循環，為何美債殖利率「不降」?</h3>
+                        <span class="read-more">閱讀更多 &rarr;</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <section id="contact" class="section">
         <div class="container">
@@ -514,6 +531,9 @@
                 </div>
             </div>
 
+            <!-- Report Images Container -->
+            <div id="report-images" class="report-images-container" style="display: none;"></div>
+
             <!-- Disclaimer (Hidden by default) -->
             <div class="strategy-disclaimer">
                 ⚠️ 本策略僅為程式交易邏輯分享，不代表對未來獲利之保證。<br>
@@ -531,7 +551,8 @@
     <!-- Modal Logic -->
     <script>
         let currentSlide = 0;
-        const strategySlides = [
+        // Default Strategy Slides (Backtest)
+        const defaultStrategySlides = [
             {
                 type: 'backtest',
                 img: 'images/backtest.png',
@@ -540,10 +561,13 @@
             }
         ];
 
+        // Active Slides (Mutable)
+        let activeSlides = [...defaultStrategySlides];
+
         function changeSlide(direction) {
             currentSlide += direction;
-            if (currentSlide >= strategySlides.length) currentSlide = 0;
-            if (currentSlide < 0) currentSlide = strategySlides.length - 1;
+            if (currentSlide >= activeSlides.length) currentSlide = 0;
+            if (currentSlide < 0) currentSlide = activeSlides.length - 1;
             updateStrategySlide();
         }
 
@@ -554,7 +578,7 @@
             const period = modal.querySelector('.data-period');
             const title = modal.querySelector('h3');
 
-            const slide = strategySlides[currentSlide];
+            const slide = activeSlides[currentSlide];
 
             img.src = slide.img;
 
@@ -620,10 +644,12 @@
             var highlights = modal.querySelector('.strategy-highlights');
             var period = modal.querySelector('.data-period');
             var disclaimer = modal.querySelector('.strategy-disclaimer'); // Added
+            var reportContainer = modal.querySelector('#report-images');
 
             if (highlights) highlights.style.display = '';
             if (period) period.style.display = '';
             if (disclaimer) disclaimer.style.display = ''; // Clear inline style
+            if (reportContainer) reportContainer.style.display = 'none';
 
             if (type === 'official') {
                 title.innerText = '掃描加入官方帳號';
@@ -655,6 +681,10 @@
                     disclaimer.style.display = 'block';
                 }
 
+                // Reset to default strategy slides
+                activeSlides = [...defaultStrategySlides];
+                currentSlide = 0; // Reset index
+
                 // Restore Highlights Data (Momentum Strategy)
                 if (highlights) {
                     highlights.style.display = 'flex';
@@ -673,7 +703,6 @@
                 // Show nav buttons
                 navBtns.forEach(btn => btn.style.display = 'flex');
 
-                currentSlide = 0;
                 updateStrategySlide();
 
             } else if (type === 'dca-info') {
@@ -757,6 +786,38 @@
                 // Fullpage style with custom background
                 modalContent.classList.add('fullpage');
                 modalContent.style.backgroundColor = '#f4f1ea';
+
+            } else if (type === 'report-1212') {
+                // Report Slides setup
+                activeSlides = [
+                    { type: 'report', img: 'images/weekly_1212/1.png', title: null },
+                    { type: 'report', img: 'images/weekly_1212/2.png', title: null }
+                ];
+                currentSlide = 0;
+
+                // Hide title (User requested no title display for reports)
+                title.style.display = 'none';
+                desc.style.display = 'none';
+
+                // Show main image (used for slides)
+                img.style.display = 'block';
+                // Adjust image style for report
+                img.style.maxWidth = '100%';
+
+                // Hide report container (we use slides now)
+                if (reportContainer) reportContainer.style.display = 'none';
+
+                if (highlights) highlights.style.display = 'none';
+                if (period) period.style.display = 'none';
+                if (disclaimer) disclaimer.style.display = 'none';
+
+                // Show nav buttons for slideshow
+                navBtns.forEach(btn => btn.style.display = 'flex');
+
+                modalContent.classList.add('fullpage');
+                modalContent.style.backgroundColor = '#f4f1ea';
+
+                updateStrategySlide();
 
             } else {  // Default to private
                 title.innerText = '掃描加 LINE 好友';
