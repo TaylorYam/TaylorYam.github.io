@@ -183,8 +183,6 @@
                             style="display: flex; flex-direction: column; gap: 0.8rem; margin-top: 1rem;">
                             <a href="javascript:void(0)" class="btn primary" onclick="openModal('strategy-info')"
                                 style="padding: 0.5rem 1rem; font-size: 0.9rem; width: fit-content;">查看策略回測數據</a>
-                            <a href="javascript:void(0)" class="card-link" onclick="openModal('private')">立即取得策略資訊
-                                &rarr;</a>
                         </div>
                     </div>
                 </div>
@@ -208,8 +206,6 @@
                             style="display: flex; flex-direction: column; gap: 0.8rem; margin-top: 1rem;">
                             <a href="javascript:void(0)" class="btn primary" onclick="openModal('dca-info')"
                                 style="padding: 0.5rem 1rem; font-size: 0.9rem; width: fit-content;">查看複利的雪球效應</a>
-                            <a href="#" onclick="openModal('private'); return false;" class="card-link">獲取更多定期定額資訊
-                                &rarr;</a>
                         </div>
                     </div>
                 </div>
@@ -232,11 +228,14 @@
                             style="display: flex; flex-direction: column; gap: 0.8rem; margin-top: 1rem;">
                             <a href="#" onclick="openModal('bond-info'); return false;" class="btn primary"
                                 style="padding: 0.5rem 1rem; font-size: 0.9rem; width: fit-content;">債券現金流展示</a>
-                            <a href="#" onclick="openModal('private'); return false;" class="card-link">立即取得相關資料
-                                &rarr;</a>
                         </div>
                     </div>
                 </div>
+            </div>
+
+            <!-- Global CTA Button -->
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="#contact" class="btn primary" style="font-size: 1.1rem; padding: 0.8rem 2rem;">立即取得策略資訊</a>
             </div>
         </div>
     </section>
@@ -401,80 +400,85 @@
     <section id="contact" class="section">
         <div class="container">
             <div class="contact-box">
-                <!-- Left Column: Contact Info -->
-                <div class="contact-left">
+                <div class="contact-header" style="width: 100%; text-align: center; margin-bottom: 3rem;">
                     <h2>準備好開始您的<br class="mobile-br">全球投資之旅了嗎？</h2>
-                    <p>我是 Taylor Yam 任益農，歡迎與我聯繫。</p>
+                </div>
 
-                    <div class="contact-methods">
-                        <!-- Phone -->
-                        <a href="tel:0975386833" class="contact-item">
-                            <span class="icon">
-                                <svg style="width: 2rem; height: 2rem; stroke: currentColor; fill: none; stroke-width: 1.5;"
-                                    viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
-                                    <path
-                                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
-                                    </path>
-                                </svg>
-                            </span>
-                            <span class="value">0975-386-833</span>
-                        </a>
+                <div class="contact-flex-container">
+                    <!-- Left Column: Contact Info -->
+                    <div class="contact-left">
+                        <p style="margin-bottom: 2rem; font-size: 1.1rem; color: #555;">我是 Taylor Yam 任益農，歡迎與我聯繫。</p>
+                        <div class="contact-methods">
+                            <!-- Phone -->
+                            <a href="tel:0975386833" class="contact-item">
+                                <span class="icon">
+                                    <svg style="width: 2rem; height: 2rem; stroke: currentColor; fill: none; stroke-width: 1.5;"
+                                        viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                                        <path
+                                            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                        </path>
+                                    </svg>
+                                </span>
+                                <span class="value">0975-386-833</span>
+                            </a>
 
-                        <!-- LINE -->
-                        <div class="contact-item">
-                            <img src="images/qr-private.jpg" alt="LINE QR Code"
-                                style="width: 120px; height: auto; border-radius: 10px; margin-bottom: 0.5rem; box-shadow: 0 4px 12px rgba(62, 39, 35, 0.15);">
-                            <span class="value select-all" style="font-size: 0.9rem; color: #888;">ID: 05032015</span>
+                            <!-- LINE -->
+                            <div class="contact-item" style="flex-direction: column;">
+                                <img src="images/qr-private.jpg" alt="LINE QR Code"
+                                    style="width: 120px; height: auto; border-radius: 10px; margin-bottom: 0.5rem; box-shadow: 0 4px 12px rgba(62, 39, 35, 0.15);">
+                                <span class="value select-all" style="font-size: 0.9rem; color: #888;">ID:
+                                    05032015</span>
+                            </div>
+
+                            <!-- Email -->
+                            <a href="mailto:kelvin85520@gmail.com" class="contact-item">
+                                <span class="icon">
+                                    <svg style="width: 2rem; height: 2rem; stroke: currentColor; fill: none; stroke-width: 1.5;"
+                                        viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                                        <path
+                                            d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                        </path>
+                                        <polyline points="22,6 12,13 2,6"></polyline>
+                                    </svg>
+                                </span>
+                                <span class="value" style="font-size: 0.9rem;">kelvin85520@gmail.com</span>
+                            </a>
                         </div>
-
-                        <!-- Email -->
-                        <a href="mailto:kelvin85520@gmail.com" class="contact-item">
-                            <span class="icon">
-                                <svg style="width: 2rem; height: 2rem; stroke: currentColor; fill: none; stroke-width: 1.5;"
-                                    viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
-                                    <path
-                                        d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
-                                    </path>
-                                    <polyline points="22,6 12,13 2,6"></polyline>
-                                </svg>
-                            </span>
-                            <span class="value" style="font-size: 0.9rem;">kelvin85520@gmail.com</span>
-                        </a>
                     </div>
-                </div>
 
-                <!-- Right Column: Contact Form -->
-                <div class="contact-right">
-                    <h3 class="form-title">或留下聯絡資料</h3>
-                    <form action="https://formspree.io/f/xkonwkbk" method="POST">
-                        <div class="form-group">
-                            <label for="name">您的稱呼 (必填)</label>
-                            <input type="text" id="name" name="name" required placeholder="例如：陳先生">
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">聯絡電話 (必填)</label>
-                            <input type="tel" id="phone" name="phone" required placeholder="0912-345-678">
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email (選填)</label>
-                            <input type="email" id="email" name="email" placeholder="name@example.com">
-                        </div>
-                        <div class="form-group">
-                            <label for="topic">諮詢項目</label>
-                            <select id="topic" name="topic">
-                                <option value="美股量化動能配置">美股量化動能配置</option>
-                                <option value="債券現金流規劃">債券現金流規劃</option>
-                                <option value="定期定額資產累積">定期定額資產累積</option>
-                                <option value="其他">其他</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">備註 (選填)</label>
-                            <textarea id="message" name="message" rows="3" placeholder="有什麼想先告訴我的嗎？"></textarea>
-                        </div>
-                        <button type="submit" class="form-submit-btn">送出諮詢</button>
-                    </form>
-                </div>
+                    <!-- Right Column: Contact Form -->
+                    <div class="contact-right">
+                        <h3 class="form-title">或留下聯絡資料</h3>
+                        <form action="https://formspree.io/f/xkonwkbk" method="POST">
+                            <div class="form-group">
+                                <label for="name">您的稱呼 (必填)</label>
+                                <input type="text" id="name" name="name" required placeholder="例如：陳先生">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">聯絡電話 (必填)</label>
+                                <input type="tel" id="phone" name="phone" required placeholder="0912-345-678">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email (選填)</label>
+                                <input type="email" id="email" name="email" placeholder="name@example.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="topic">諮詢項目</label>
+                                <select id="topic" name="topic">
+                                    <option value="美股量化動能配置">美股量化動能配置</option>
+                                    <option value="債券現金流規劃">債券現金流規劃</option>
+                                    <option value="定期定額資產累積">定期定額資產累積</option>
+                                    <option value="其他">其他</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">備註 (選填)</label>
+                                <textarea id="message" name="message" rows="3" placeholder="有什麼想先告訴我的嗎？"></textarea>
+                            </div>
+                            <button type="submit" class="form-submit-btn">送出諮詢</button>
+                        </form>
+                    </div>
+                </div> <!-- End contact-flex-container -->
             </div>
         </div>
     </section>
