@@ -586,22 +586,140 @@ h3 {
 }
 
 /* Contact */
+/* Contact */
 .contact-box {
-    background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(168, 85, 247, 0.1));
-    padding: 2rem;
-    /* Reduced padding */
-    border-radius: 4px;
-    /* Less rounded corners (almost square) */
-    text-align: center;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.05), rgba(168, 85, 247, 0.05));
+    padding: 3rem;
+    border-radius: 12px;
     border: 1px solid var(--glass-border);
-    max-width: 700px;
-    /* Limit width to avoid stretching */
+    max-width: 1000px;
     margin: 0 auto;
-    /* Center the box */
+    display: flex;
+    gap: 4rem;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.contact-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact-right {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid rgba(62, 39, 35, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
 
 .contact-box h2 {
     margin-bottom: 1rem;
+    text-align: left;
+}
+
+.contact-methods {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: flex-start;
+    margin-top: 2rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+/* Contact Form Styles */
+.form-title {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 1.2rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #d7ccc8;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.8);
+    font-family: var(--font-main);
+    font-size: 1rem;
+    color: var(--text-color);
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(62, 39, 35, 0.1);
+}
+
+.form-submit-btn {
+    width: 100%;
+    padding: 0.8rem;
+    background: var(--primary-color);
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    font-size: 1rem;
+}
+
+.form-submit-btn:hover {
+    background: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+@media (max-width: 900px) {
+    .contact-box {
+        flex-direction: column;
+        padding: 2rem;
+        gap: 3rem;
+        text-align: center;
+    }
+
+    .contact-left {
+        align-items: center;
+    }
+
+    .contact-box h2 {
+        text-align: center;
+    }
+
+    .contact-methods {
+        align-items: center;
+    }
+
+    .contact-right {
+        width: 100%;
+    }
 }
 
 /* Strategy Section (New) - Quant/Stock (Dark Warm Brown) */
