@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Taylor Yam 任益農 | 全球理財規劃顧問</title>
+    <title>Taylor Yam 任益農 | 複委託專員</title>
     <meta name="description" content="結合 6 年交易實戰經驗與程式量化邏輯，為您提供超越傳統觀點的投資與全球資產配置建議。專精美股量化動能與世界級企業債券配置。">
     <meta name="keywords" content="Taylor Yam, 任益農, 全球理財規劃顧問, 美股量化, 程式交易, 全球資產配置, 債券投資, 複委託, 玉山證券">
 
     <!-- Open Graph / Facebook / LINE -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://tayloryam.github.io/">
-    <meta property="og:title" content="Taylor Yam 任益農 | 全球理財規劃顧問">
+    <meta property="og:title" content="Taylor Yam 任益農 | 複委託專員">
     <meta property="og:description" content="結合 6 年交易實戰經驗與程式量化邏輯，為您提供超越傳統觀點的投資與全球資產配置建議。">
     <meta property="og:image" content="images/profile-professional.png">
     <link rel="stylesheet" href="style.css">
@@ -564,6 +564,9 @@
             var desc = modal.querySelector('p');
             var img = modal.querySelector('img');
             var navBtns = modal.querySelectorAll('.nav-btn');
+
+            // Clear previous image to avoid flashing
+            img.src = '';
 
             // Reset state
             modalContent.classList.remove('fullpage');
