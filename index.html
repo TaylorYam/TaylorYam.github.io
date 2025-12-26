@@ -549,7 +549,7 @@
             {
                 type: 'backtest',
                 img: 'images/backtest.png',
-                showHighlights: true,
+                showHighlights: false, // Hidden for compliance
                 title: '動能趨勢策略回測績效<span class="responsive-subtitle" style="font-size: 0.8em;">(本金 100,000 美金)</span> <span style="font-size: 0.7em; font-weight: normal; margin-left: 5px; color: #666;">(回測期間：2020/01 - 2025/11)</span>'
             }
         ];
@@ -680,7 +680,8 @@
 
                 // Restore Highlights Data (Momentum Strategy)
                 if (highlights) {
-                    highlights.style.display = 'flex';
+                    // highlights.style.display = 'flex'; // Hiding for compliance
+                    highlights.style.display = 'none';
                     const values = highlights.querySelectorAll('.value');
                     const subs = highlights.querySelectorAll('.sub-value');
                     if (values.length >= 2) {
@@ -719,7 +720,8 @@
 
                 // 2. Update Highlights Data (Overlay)
                 if (highlights) {
-                    highlights.style.display = 'flex';
+                    // highlights.style.display = 'flex'; // Hiding for compliance
+                    highlights.style.display = 'none';
                     // highlights usually have absolute positioning in css, ensure it's kept
                     // If not, we might need to enforce it, but typically it is.
                     const values = highlights.querySelectorAll('.value');
