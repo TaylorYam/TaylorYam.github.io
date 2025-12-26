@@ -155,19 +155,7 @@
     /* Hide Nav Buttons on Mobile */
     /* Show Nav Buttons on Mobile */
     .modal-content.fullpage .nav-btn {
-        display: flex !important;
-        width: 40px;
-        height: 40px;
-        font-size: 1.5rem;
-        border-radius: 50%;
-        background: rgba(255, 255, 255, 0.9);
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-        position: fixed;
-        /* Fixed to viewport usually works better, but here absolute relative to modal container */
-        top: auto;
-        bottom: 20px;
-        transform: none;
-        z-index: 60;
+        display: none !important;
     }
 
     .modal-content.fullpage .nav-btn.prev {
