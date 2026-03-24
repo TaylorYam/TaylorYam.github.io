@@ -60,59 +60,7 @@
         font-size: 0.85rem !important;
     }
 
-    /* Highlights: Order 2 (Side-by-side) */
-    .modal-content.fullpage .strategy-highlights {
-        order: 2;
-        position: relative !important;
-        top: auto !important;
-        left: auto !important;
-        transform: none !important;
-        width: 100%;
-        display: flex;
-        flex-direction: row !important;
-        /* Force Horizontal */
-        flex-wrap: nowrap !important;
-        /* No wrapping */
-        gap: 8px;
-        margin: 5px 0 15px 0;
-    }
-
-    .modal-content.fullpage .highlight-card {
-        flex: 1;
-        min-width: 0;
-        /* Allow shrinking */
-        padding: 6px 4px !important;
-        /* Compact padding */
-        margin: 0 !important;
-        background: #ffffff;
-        /* Explicit card background */
-        border-radius: 6px;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-    }
-
-    /* Shrink fonts inside cards significantly */
-    .modal-content.fullpage .highlight-card .label {
-        font-size: 0.65rem !important;
-        /* Very small label */
-        margin-bottom: 2px;
-        color: #888;
-    }
-
-    .modal-content.fullpage .highlight-card .value {
-        font-size: 1.1rem !important;
-        /* Design requested ~50% reduction */
-        font-weight: 700;
-        line-height: 1.2;
-        color: #c0392b;
-        /* Keep red color */
-    }
-
-    .modal-content.fullpage .highlight-card .sub-value {
-        font-size: 0.6rem !important;
-        color: #999;
-    }
-
-    /* Image: Order 3 */
+    /* Image: Order 2 */
     .modal-content.fullpage img {
         order: 3;
         width: 100%;
@@ -121,23 +69,6 @@
         max-height: none !important;
         margin: 0;
         border-radius: 4px;
-    }
-
-    /* Disclaimer: Order 4 (Below Image) */
-    .modal-content.fullpage .strategy-disclaimer {
-        order: 4;
-        position: relative !important;
-        bottom: auto !important;
-        left: auto !important;
-        transform: none !important;
-        width: 100%;
-        margin-top: 15px;
-        font-size: 0.75rem !important;
-        background: transparent !important;
-        box-shadow: none !important;
-        padding: 5px;
-        border-top: 1px solid rgba(0, 0, 0, 0.1);
-        /* Separator line */
     }
 
     /* Close Button (Absolute, ignore flex order) */
