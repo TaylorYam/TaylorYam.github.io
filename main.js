@@ -1,5 +1,3 @@
-// script.js
-
 document.addEventListener('DOMContentLoaded', () => {
     // Smooth scrolling for navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -7,26 +5,47 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
             const target = document.querySelector(this.getAttribute('href'));
             if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth'
-                });
+                target.scrollIntoView({ behavior: 'smooth' });
             }
         });
     });
 
-    // Simple interaction for buttons (Rubber band effect or ripple could go here)
-    const buttons = document.querySelectorAll('.btn');
-    buttons.forEach(btn => {
-        btn.addEventListener('mousedown', function() {
-            this.style.transform = 'scale(0.95)';
-        });
-        btn.addEventListener('mouseup', function() {
-            this.style.transform = 'translateY(-2px)'; // Reset to hover state
-        });
-        btn.addEventListener('mouseleave', function() {
-            this.style.transform = ''; // Reset to normal
-        });
-    });
+    // Scroll-spy: highlight active nav link
+    const sections = document.querySelectorAll('header[id], section[id]');
+    const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
 
-    console.log("Website Loaded - Ready to impress!");
+    function updateActiveNav() {
+        let currentId = '';
+        sections.forEach(section => {
+            const top = section.offsetTop - 150;
+            if (window.scrollY >= top) {
+                currentId = section.getAttribute('id');
+            }
+        });
+        navLinks.forEach(link => {
+            link.classList.toggle('active', link.getAttribute('href') === '#' + currentId);
+        });
+    }
+
+    window.addEventListener('scroll', updateActiveNav, { passive: true });
+    updateActiveNav();
+
+    // Keyboard support for modal
+    document.addEventListener('keydown', function (e) {
+        const modal = document.getElementById('qr-modal');
+        if (!modal || !modal.classList.contains('active')) return;
+
+        if (e.key === 'Escape') {
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+        } else if (e.key === 'ArrowRight') {
+            if (typeof changeSlide === 'function' && activeSlides && activeSlides.length > 1) {
+                changeSlide(1);
+            }
+        } else if (e.key === 'ArrowLeft') {
+            if (typeof changeSlide === 'function' && activeSlides && activeSlides.length > 1) {
+                changeSlide(-1);
+            }
+        }
+    });
 });
