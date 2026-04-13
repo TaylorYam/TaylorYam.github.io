@@ -27,6 +27,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        /* Force Mobile Break Override */
+        .mobile-br {
+            display: none;
+        }
+
+        @media screen and (max-width: 900px) {
+            .mobile-br {
+                display: block !important;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -45,41 +57,56 @@
     <header id="home" class="hero">
         <div class="hero-content">
             <h1 class="hero-title">
-                <span class="keep-phrase">漲的時候不敢買，</span><br><span class="keep-phrase">跌的時候捨不得賣？</span>
+                <span class="keep-phrase">為什麼總是</span><br><span class="keep-phrase">「該抱不抱、該跑不跑」?</span>
             </h1>
             <p class="hero-subtitle">
                 <span class="keep-phrase">分享全球資產配置觀念</span><span class="keep-phrase">與市場觀察，</span><span
                     class="keep-phrase">讓你的決策更有脈絡。</span><br class="mobile-br">
                 <span class="keep-phrase">不再用情緒面對市場。</span>
             </p>
-            <div class="value-strip" style="margin-top: 3rem;">
-                <div class="value-item">
-                    <svg class="value-item-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                        <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z" stroke-linejoin="round" />
-                        <circle cx="12" cy="12" r="3" />
-                    </svg>
-                    <div class="value-item-text">
-                        <strong>洞悉市場</strong>
-                        <span>整理關鍵變數與風險情境，建立可理解的脈絡。</span>
+            <div class="value-grid" style="margin-top: 4rem;">
+                <!-- Value 1: The Insight -->
+                <div class="value-card">
+                    <div class="value-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z" stroke-linejoin="round" />
+                            <circle cx="12" cy="12" r="3" />
+                        </svg>
                     </div>
+                    <h3><span class="highlight-title">洞悉市場</span>THE INSIGHT</h3>
+                    <p>
+                        <span class="keep-phrase">整理市場的關鍵變數與風險情境，</span><span class="keep-phrase">建立可理解的脈絡與情境。</span>
+
+                    </p>
                 </div>
-                <div class="value-item">
-                    <svg class="value-item-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke-linejoin="round" />
-                    </svg>
-                    <div class="value-item-text">
-                        <strong>克服人性</strong>
-                        <span>用紀律與規則降低追高殺低、過度自信等情緒干擾。</span>
+                <!-- Value 2: The Discipline -->
+                <div class="value-card">
+                    <div class="value-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke-linejoin="round" />
+                        </svg>
                     </div>
+                    <h3><span class="highlight-title">克服人性</span>THE DISCIPLINE</h3>
+                    <p>
+                        <span class="keep-phrase">討論投資常見的行為偏誤</span><span
+                            class="keep-phrase">（追高殺低、過度自信、損失厭惡），</span><span class="keep-phrase">以及如何用紀律與規則</span><span
+                            class="keep-phrase">降低情緒干擾。</span>
+
+                    </p>
                 </div>
-                <div class="value-item">
-                    <svg class="value-item-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                        <path d="M18 20V10M12 20V4M6 20v-6" stroke-linecap="round" />
-                    </svg>
-                    <div class="value-item-text">
-                        <strong>量化驗證</strong>
-                        <span>用數據與方法檢視想法，避免只靠感覺下結論。</span>
+                <!-- Value 3: The Logic -->
+                <div class="value-card">
+                    <div class="value-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M18 20V10M12 20V4M6 20v-6" stroke-linecap="round" />
+                        </svg>
                     </div>
+                    <h3><span class="highlight-title">量化驗證</span>THE LOGIC</h3>
+                    <p>
+                        <span class="keep-phrase">用可驗證的數據與方法檢視想法：</span><span class="keep-phrase">把假設寫清楚、</span><span
+                            class="keep-phrase">把條件說明白，</span><span class="keep-phrase">避免只靠感覺下結論。</span>
+
+                    </p>
                 </div>
             </div>
         </div>
@@ -95,16 +122,19 @@
                 <!-- Text Content (Moved to Left) -->
                 <div class="about-content">
                     <h4 class="about-position">玉山證券 複委託專員 ❘ 清華大學 經濟學系</h4>
-                    <p class="about-intro">我用數據與流程，整理市場觀察與配置思路。</p>
+                    <p class="about-intro" style="font-size: 1.6rem; color: var(--primary-color);">
+                        我用數據與流程，整理市場觀察與配置思路。
+                    </p>
                     <p class="about-details">
                         <span class="keep-phrase">來自外商自營部門的訓練，</span><span class="keep-phrase">讓我習慣把市場拆成</span><span
                             class="keep-phrase">「可被理解的脈絡」：</span><span class="keep-phrase">趨勢、風險、資金與情緒。</span>
                     </p>
-                    <p class="about-details">
+                    <p class="about-details" style="margin-top: 1rem;">
                         <span class="keep-phrase">我在這裡分享可重複使用</span><span class="keep-phrase">的投資框架</span><span
                             class="keep-phrase">（目標設定、資產配置、風險控管、再平衡），</span><span
                             class="keep-phrase">把想法說清楚、</span><span class="keep-phrase">把假設講明白，</span><span
                             class="keep-phrase">幫助你建立更一致的決策方式。</span>
+                        <br><span style="font-size: 0.9rem; color: #888;">（本站內容為一般資訊分享，非投資建議。）</span>
                     </p>
                 </div>
                 <!-- Image Block (Moved to Right) -->
@@ -115,34 +145,44 @@
                 </div>
             </div>
 
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>經驗</h3>
+                    <p>市場觀察<br><span class="keep-phrase" style="font-size:0.8rem; color:#8a7a70;">風險意識</span></p>
+                </div>
+                <div class="stat-card">
+                    <h3>思維</h3>
+                    <p>流程化決策<br><span class="keep-phrase" style="font-size:0.8rem; color:#8a7a70;">數據驗證</span></p>
+                </div>
+                <div class="stat-card">
+                    <h3>配置</h3>
+                    <p>配置觀念<br><span class="keep-phrase" style="font-size:0.8rem; color:#8a7a70;">再平衡原則</span></p>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Weekly Reports Section -->
     <section id="weekly-reports" class="section">
         <div class="container">
-            <div class="reports-header">
-                <h2 class="section-title reports-title">精選週報</h2>
-                <p class="reports-subtitle">我定期整理的市場觀察與配置思路</p>
-            </div>
-            <div class="report-list">
-                <!-- Report Card 1 - Featured -->
-                <div class="report-card-horizontal" role="button" tabindex="0" onclick="openModal('report-1212')" onkeydown="if(event.key==='Enter')openModal('report-1212')">
-                    <img src="images/weekly_1212/thumbnail.png" alt="Taylor's Take 12/12" class="report-thumb-h">
-                    <div class="report-info-h">
+            <h2 class="section-title text-center" style="margin-bottom: 3rem; color: #3e2723; text-align: center;">
+                精選週報分享</h2>
+            <div class="report-grid">
+                <!-- Report Card 1 -->
+                <div class="report-card" onclick="openModal('report-1212')">
+                    <img src="images/weekly_1212/thumbnail.png" alt="Taylor's Take 12/12" class="report-thumbnail">
+                    <div class="report-info">
                         <span class="report-date">2025/12/12</span>
                         <h3 class="report-title">降息循環，為何美債殖利率「不降」?</h3>
-                        <p class="report-excerpt">探討聯準會降息後，長天期公債殖利率反而上升的結構性原因。</p>
                         <span class="read-more">閱讀更多 &rarr;</span>
                     </div>
                 </div>
                 <!-- Report Card 2 -->
-                <div class="report-card-horizontal" role="button" tabindex="0" onclick="openModal('report-1203')" onkeydown="if(event.key==='Enter')openModal('report-1203')">
-                    <img src="images/weekly_1203/thumbnail.png" alt="Taylor's Take 12/03" class="report-thumb-h">
-                    <div class="report-info-h">
+                <div class="report-card" onclick="openModal('report-1203')">
+                    <img src="images/weekly_1203/thumbnail.png" alt="Taylor's Take 12/03" class="report-thumbnail">
+                    <div class="report-info">
                         <span class="report-date">2025/12/03</span>
                         <h3 class="report-title">投資日股要注意什麼?</h3>
-                        <p class="report-excerpt">日股的匯率風險、央行政策與進場時機的觀察重點。</p>
                         <span class="read-more">閱讀更多 &rarr;</span>
                     </div>
                 </div>
@@ -153,32 +193,54 @@
     <section id="contact" class="section">
         <div class="container">
             <div class="contact-box">
-                <h2>準備好開始您的<br class="mobile-br">全球投資之旅了嗎？</h2>
-                <p class="contact-intro">我是 Taylor Yam 任益農，歡迎與我聯繫。</p>
-                <div class="contact-methods">
-                    <a href="tel:0975386833" class="contact-item">
-                        <span class="icon">
-                            <svg class="contact-icon" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-                            </svg>
-                        </span>
-                        <span class="value">0975-386-833</span>
-                    </a>
-                    <div class="contact-item">
-                        <img src="images/qr-private.jpg" alt="LINE QR Code" class="line-qr">
-                        <span class="value select-all contact-sub">ID: 05032015</span>
-                    </div>
-                    <a href="mailto:ckelvin85520-72215@esunsec.com.tw" class="contact-item">
-                        <span class="icon">
-                            <svg class="contact-icon" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                                <polyline points="22,6 12,13 2,6"></polyline>
-                            </svg>
-                        </span>
-                        <span class="value contact-sub">ckelvin85520-72215@esunsec.com.tw</span>
-                    </a>
+                <div class="contact-header" style="width: 100%; text-align: center; margin-bottom: 3rem;">
+                    <h2>準備好開始您的<br class="mobile-br">全球投資之旅了嗎？</h2>
                 </div>
-            </div>
+
+                <div class="contact-flex-container">
+                    <!-- Left Column: Contact Info -->
+                    <div class="contact-left">
+                        <p style="margin-bottom: 2rem; font-size: 1.1rem; color: #555;">我是 Taylor Yam 任益農，歡迎與我聯繫。
+                        </p>
+                        <div class="contact-methods">
+                            <!-- Phone -->
+                            <a href="tel:0975386833" class="contact-item">
+                                <span class="icon">
+                                    <svg style="width: 2rem; height: 2rem; stroke: currentColor; fill: none; stroke-width: 1.5;"
+                                        viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                                        <path
+                                            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                        </path>
+                                    </svg>
+                                </span>
+                                <span class="value">0975-386-833</span>
+                            </a>
+
+                            <!-- LINE -->
+                            <div class="contact-item" style="flex-direction: column;">
+                                <img src="images/qr-private.jpg" alt="LINE QR Code"
+                                    style="width: 120px; height: auto; border-radius: 10px; margin-bottom: 0.5rem; box-shadow: 0 4px 12px rgba(62, 39, 35, 0.15);">
+                                <span class="value select-all" style="font-size: 0.9rem; color: #888;">ID:
+                                    05032015</span>
+                            </div>
+
+                            <!-- Email -->
+                            <a href="mailto:ckelvin85520-72215@esunsec.com.tw" class="contact-item">
+                                <span class="icon">
+                                    <svg style="width: 2rem; height: 2rem; stroke: currentColor; fill: none; stroke-width: 1.5;"
+                                        viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                                        <path
+                                            d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                        </path>
+                                        <polyline points="22,6 12,13 2,6"></polyline>
+                                    </svg>
+                                </span>
+                                <span class="value" style="font-size: 0.9rem;">ckelvin85520-72215@esunsec.com.tw</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- End contact-flex-container -->
         </div>
     </section>
 
@@ -190,7 +252,7 @@
     <!-- QR Code Modal -->
     <div id="qr-modal" class="modal-overlay" onclick="closeModal(event)">
         <div class="modal-content">
-            <button class="close-btn" aria-label="關閉" onclick="closeModal(event)">&times;</button>
+            <span class="close-btn" onclick="closeModal(event)">&times;</span>
             <h3 style="color: var(--primary-color); margin-bottom: 0.5rem;">掃描加 LINE 好友</h3>
 
             <p style="color: #666; margin-bottom: 1rem;">索取簡報與試算表<br><span style="font-size: 0.9rem;">ID:
@@ -306,8 +368,8 @@
                 img.style.display = 'block';
                 img.style.maxWidth = '100%';
 
-                // Hide nav buttons for single slide
-                navBtns.forEach(btn => btn.style.display = 'none');
+                // Show nav buttons
+                navBtns.forEach(btn => btn.style.display = 'flex');
 
                 modalContent.classList.add('fullpage');
                 modalContent.style.backgroundColor = '#f4f1ea';
